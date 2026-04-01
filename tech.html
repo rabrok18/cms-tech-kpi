@@ -207,8 +207,9 @@ const RANK_ICONS=['🥇','🥈','🥉'];
 const RANK_BAR=['#d97706','#94a3b8','#92400e'];
 
 // Payout tiers
-const Q_PAYOUT={0:0,1:0,2:200,3:300};
-function qPayout(n){return Q_PAYOUT[Math.min(n,3)]||0;}
+// Quarterly payout: based on total goals hit (0-9)
+function qPayout(totalGoals){if(totalGoals>=9)return 300;if(totalGoals>=6)return 200;return 0;}
+
 
 const toSlug=n=>n.toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'');
 const fromSlug=(s,ns)=>ns.find(n=>toSlug(n)===s)||null;
@@ -244,7 +245,10 @@ function qStatus(name,months){
   const passedMos=loaded.filter(Boolean).length;
   const payout=qPayout(passedMos);
   const quarterDone=loaded.length===3;
-  return{curQ,ly,qMons,results,loaded,passedMos,payout,quarterDone,
+  const totalGoals=qMons.reduce((sum,mk)=>sum+(months[mk]?.techs[name]?.passCount||0),0);
+  const maxGoals=loaded.length*3;
+  const payout2=quarterDone?qPayout(totalGoals):null;
+  return{curQ,ly,qMons,results,loaded,passedMos,totalGoals,maxGoals,payout:payout2,quarterDone,
     anyFail:results.some(v=>v===false),
     allPass:loaded.length===3&&loaded.every(Boolean)};
 }
@@ -286,14 +290,13 @@ function renderPage(name,data){
 
   // Hero quarter badge
   let qBCls,qBTxt;
-  const pm=qs.passedMos,ql=qs.loaded.length,qd=qs.quarterDone;
+  const tg=qs.totalGoals||0,mg=qs.maxGoals||0,qd=qs.quarterDone;
   if(qd){
-    if(pm===3){qBCls='qb-bonus';qBTxt='★ Full Bonus — $300';}
-    else if(pm===2){qBCls='qb-partial';qBTxt='◑ Partial Bonus — $200';}
-    else{qBCls='qb-dead';qBTxt='✗ No Bonus — $0';}
+    if(tg>=9){qBCls='qb-bonus';qBTxt=`★ $300 — Perfect Quarter (${tg}/9)`;}
+    else if(tg>=6){qBCls='qb-partial';qBTxt=`◑ $200 — Partial Bonus (${tg}/9)`;}
+    else{qBCls='qb-dead';qBTxt=`✗ $0 — No Bonus (${tg}/9)`;}
   } else {
-    if(pm===ql&&ql>0){qBCls='qb-alive';qBTxt=`◉ ${qs.curQ} — ${pm}/${ql} alive`;}
-    else if(pm<ql){qBCls='qb-dead';qBTxt=`✗ ${qs.curQ} — ${pm}/${ql} — at risk`;}
+    if(mg>0){qBCls='qb-alive';qBTxt=`◉ ${qs.curQ} — ${tg}/${mg} goals so far`;}
     else{qBCls='qb-pend';qBTxt=`· ${qs.curQ} — Pending`;}
   }
 
@@ -315,11 +318,11 @@ function renderPage(name,data){
   // Quarter verdict + payout chip
   let qvCls,qvTxt,pcCls,pcTxt;
   if(qd){
-    if(pm===3){qvCls='vg';qvTxt='All 3 months passed — full bonus earned!';pcCls='pc-full';pcTxt='$300';}
-    else if(pm===2){qvCls='vp';qvTxt='2/3 months passed — partial bonus earned';pcCls='pc-partial';pcTxt='$200';}
-    else{qvCls='vr';qvTxt=`${pm}/3 months — no bonus`;pcCls='pc-zero';pcTxt='$0';}
+    if(tg>=9){qvCls='vg';qvTxt='9/9 goals hit — perfect quarter!';pcCls='pc-full';pcTxt='$300';}
+    else if(tg>=6){qvCls='vp';qvTxt=`${tg}/9 goals hit — partial bonus`;pcCls='pc-partial';pcTxt='$200';}
+    else{qvCls='vr';qvTxt=`${tg}/9 goals hit — no bonus`;pcCls='pc-zero';pcTxt='$0';}
   } else {
-    qvCls='vb';qvTxt=`${pm}/${ql} months passed — quarter in progress`;pcCls='pc-progress';pcTxt=`${pm}/${ql}`;
+    qvCls='vb';qvTxt=`${tg}/${mg} goals hit so far — quarter in progress`;pcCls='pc-progress';pcTxt=`${tg}/${mg}`;
   }
 
   // Payout tier strip — highlight active/earned tier
@@ -355,7 +358,7 @@ function renderPage(name,data){
     const first=mi===0;
     const cc=t.passCount===3?'mrc-p':t.monthPass?'mrc-t':'mrc-f';
     const devD=t.avgDev!==null?parseFloat(t.avgDev).toFixed(2)+'h':'—';
-    return`<div class="mrow"><div class="mr-hdr" onclick="togRow(this)"><div class="mrl"><div class="mr-mo">${mk}</div><div class="mr-chip ${cc}">${t.passCount}/3 — ${t.monthPass?'Pass':'Fail'}</div></div><div class="mr-chev ${first?'open':''}">▾</div></div><div class="mr-body ${first?'open':''}"><div class="kpi-grid">${kc('Hr Dev',devD,t.devPass,'≤ 2 hrs')}${kc('Recs',t.rec!==null?t.rec:'—',t.recPass,'20+')}${kc('Driver',t.drv!==null?t.drv:'—',t.drvPass,'75+')}</div></div></div>`;
+    return`<div class="mrow"><div class="mr-hdr" onclick="togRow(this)"><div class="mrl"><div class="mr-mo">${mk}</div><div class="mr-chip ${cc}">${t.passCount}/3 — ${t.monthPass?'Pass':'Fail'}</div></div><div class="mr-chev ${first?'open':''}">▾</div></div><div class="mr-body ${first?'open':''}"><div class="kpi-grid">${kc('Hr Dev',devD,t.devPass,'≤ 0 hrs')}${kc('Recs',t.rec!==null?t.rec:'—',t.recPass,'20+')}${kc('Driver',t.drv!==null?t.drv:'—',t.drvPass,'75+')}</div></div></div>`;
   }).join('');
 
   // Leaderboard rows
@@ -365,12 +368,12 @@ function renderPage(name,data){
     const barPct=Math.round((entry.score/MAX)*100);
     const fillClr=isTop3?RANK_BAR[i]:'#cbd5e1';
     const entryQs=qStatus(entry.name,months);
-    const entryPm=entryQs?.passedMos||0;
-    const entryPay=qPayout(entryPm);
+    const entryTg=entryQs?.totalGoals||0;
+    const entryPay=entryQs?.payout||0;
     const payChip=entryPay>0&&entryQs?.quarterDone
       ?`<div class="lb-bonus-chip" ${entryPay===200?'style="background:var(--alt);color:var(--golddk);border-color:var(--abd)"':''}>${entryPay===300?'★ ':''}$${entryPay}</div>`
-      :entryQs&&!entryQs.quarterDone&&entryPm>0
-        ?`<div class="lb-bonus-chip" style="background:var(--blt);color:var(--blue);border-color:var(--bbd)">${entryPm}/3 so far</div>`:'';
+      :entryQs&&!entryQs.quarterDone&&entryTg>0
+        ?`<div class="lb-bonus-chip" style="background:var(--blt);color:var(--blue);border-color:var(--bbd)">${entryTg}/${entryQs.maxGoals||'?'} goals</div>`:'';
     return`<div class="lb-row ${isYou?'you':rank===1?'t1':''}"><div class="lb-rank-wrap">${rankWrap}</div><div class="lb-info"><div class="lb-name ${isYou?'yn':''}">${entry.name}${isYou?'<span class="lb-you-tag">YOU</span>':''}</div><div class="lb-sub">${entry.months} month${entry.months!==1?'s':''} · ${cls&&isYou?cls:'—'}</div></div><div class="lb-right"><div class="lb-pts ${isTop3?'c'+rank:''}">${entry.score}</div><div class="lb-pts-max">/ ${MAX}</div><div class="lb-bar"><div class="lb-bar-fill" style="width:${barPct}%;background:${fillClr}"></div></div>${payChip}</div></div>`;
   }).join('');
 
@@ -391,7 +394,7 @@ function renderPage(name,data){
     <!-- QUARTER SECTION -->
     <div class="sec">${qs.curQ} ${qs.ly} — Quarterly Bonus</div>
     <div class="q-card">
-      <div class="card-navy-hdr"><div class="card-navy-title">${qs.curQ} ${qs.ly} Tracker</div><div style="font-size:10px;color:rgba(255,255,255,.4)">2 months = $200 · 3 months = $300</div></div>
+      <div class="card-navy-hdr"><div class="card-navy-title">${qs.curQ} ${qs.ly} Tracker</div><div style="font-size:10px;color:rgba(255,255,255,.4)">6+ goals = $200 · 9/9 = $300</div></div>
       <div class="q-months">${qCols}</div>
       <div class="q-verdict">
         <div class="qv-text ${qvCls}">${qvTxt}</div>
@@ -399,9 +402,9 @@ function renderPage(name,data){
       </div>
       <!-- Payout tier strip -->
       <div class="payout-strip">
-        <div class="pt-tier"><div class="pt-mo">0–1 months</div><div class="pt-amt">$0</div></div>
-        <div class="pt-tier ${tierCls(2)}"><div class="pt-mo">2 months</div><div class="pt-amt">$200</div></div>
-        <div class="pt-tier ${tierCls(3)}"><div class="pt-mo">3 months</div><div class="pt-amt">$300</div></div>
+        <div class="pt-tier ${tg<6&&qd?'earned':''}"><div class="pt-mo">0–5 goals</div><div class="pt-amt">$0</div></div>
+        <div class="pt-tier ${tg>=6?'earned':''}"><div class="pt-mo">6–8 goals</div><div class="pt-amt">$200</div></div>
+        <div class="pt-tier ${tg>=9?'earned':''}"><div class="pt-mo">9/9 goals</div><div class="pt-amt">$300</div></div>
       </div>
     </div>
 
@@ -433,7 +436,7 @@ function renderPage(name,data){
 
 function renderGauges(t){
   const G=[
-    {id:'g1',pct:t.avgDev!==null?Math.min((Math.max(0,4-t.avgDev)/4),1):0,val:t.avgDev!==null?parseFloat(t.avgDev).toFixed(2):'—',unit:'hrs avg',name:'Hr Deviation',goal:'≤ 2 hrs',pass:t.devPass},
+    {id:'g1',pct:t.avgDev!==null?Math.min(Math.max((0-t.avgDev)/4,0),1):0,val:t.avgDev!==null?parseFloat(t.avgDev).toFixed(2):'—',unit:'hrs avg',name:'Hr Deviation',goal:'≤ 0 hrs',pass:t.devPass},
     {id:'g2',pct:t.rec!==null?Math.min(t.rec/40,1):0,val:t.rec!==null?t.rec:'—',unit:'recs',name:'Recommendations',goal:'20+',pass:t.recPass},
     {id:'g3',pct:t.drv!==null?Math.min(t.drv/100,1):0,val:t.drv!==null?t.drv:'—',unit:'score',name:'Driver Safety',goal:'75+',pass:t.drvPass},
   ];
@@ -444,7 +447,7 @@ function renderGauges(t){
   });
 }
 
-const TCFG={dev:{label:'Avg Hr Deviation',goal:2,unit:'h',pk:'devPass'},rec:{label:'Recommendations',goal:20,unit:'',pk:'recPass'},drv:{label:'Driver Safety',goal:75,unit:'',pk:'drvPass'}};
+const TCFG={dev:{label:'Avg Hr Deviation',goal:0,unit:'h',pk:'devPass'},rec:{label:'Recommendations',goal:20,unit:'',pk:'recPass'},drv:{label:'Driver Safety',goal:75,unit:'',pk:'drvPass'}};
 function buildTrend(key){
   if(trendChart){trendChart.destroy();trendChart=null;}
   const cfg=TCFG[key],data=trendStore[key],passes=trendStore[cfg.pk];
