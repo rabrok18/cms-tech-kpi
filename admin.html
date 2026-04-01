@@ -304,16 +304,22 @@ async function refreshRoster(){
   list.innerHTML = sorted.map(name => {
     const cls = roster[name] || '';
     const isEligible = ELIGIBLE_CLASSES.includes(cls);
+    const isActive = data.active ? data.active[name] !== false : true;
     const options = ALL_CLASSES.map(c =>
       `<option value="${c}" ${c===cls?'selected':''}>${c}</option>`
     ).join('');
     return `<div class="roster-row">
       <div class="roster-name">${name}</div>
-      <select class="roster-select ${isEligible?'eligible':'ineligible'}" data-name="${name}" onchange="onRosterChange(this)">
-        <option value="" ${!cls?'selected':''}>— Unassigned —</option>
-        ${options}
-      </select>
-      <div id="badge-${toSlug(name)}" class="${isEligible?'eligible-badge':'ineligible-badge'}">${isEligible?'✓ Eligible':'Not eligible'}</div>
+      <div class="roster-right">
+        <select class="roster-select ${isEligible?'eligible':'ineligible'}" data-name="${name}" onchange="onRosterChange(this)">
+          <option value="" ${!cls?'selected':''}>— Unassigned —</option>
+          ${options}
+        </select>
+        <label class="toggle" title="${isActive?'Active':'Hidden'}">
+          <input type="checkbox" ${isActive?'checked':''} data-name="${name}" onchange="onToggleChange(this)">
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
     </div>`;
   }).join('');
 
@@ -370,4 +376,3 @@ async function saveRoster(){
 </script>
 </body>
 </html>
-
