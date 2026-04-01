@@ -79,15 +79,24 @@ body{font-family:'Figtree',sans-serif;background:var(--bg);color:var(--text);min
 .card-hdr-btn:hover{background:rgba(255,255,255,.1);color:white}
 @media(max-width:600px){.cfg-grid{grid-template-columns:1fr}.slot-grid{grid-template-columns:1fr}.pub-row{grid-template-columns:1fr}}
 
-.roster-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)}
+.roster-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)}
 .roster-row:last-child{border-bottom:none}
-.roster-name{font-size:14px;font-weight:700;flex:1}
-.roster-select{background:var(--bg);border:1.5px solid var(--border);border-radius:8px;color:var(--text);padding:8px 10px;font-family:'Figtree',sans-serif;font-size:12px;cursor:pointer;min-width:180px;transition:border-color .2s}
+.roster-name{font-size:13px;font-weight:700;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.roster-right{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.roster-select{background:var(--bg);border:1.5px solid var(--border);border-radius:7px;color:var(--text);padding:6px 8px;font-family:'Figtree',sans-serif;font-size:11px;cursor:pointer;max-width:160px;transition:border-color .2s}
 .roster-select:focus{outline:none;border-color:var(--amber)}
 .roster-select.eligible{border-color:var(--gbd);background:var(--glt)}
 .roster-select.ineligible{border-color:var(--border);background:var(--bg)}
-.eligible-badge{font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;background:var(--glt);color:var(--green);border:1px solid var(--gbd);white-space:nowrap}
-.ineligible-badge{font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;background:var(--bg);color:var(--sub);border:1px solid var(--border);white-space:nowrap}
+/* Toggle switch */
+.toggle-wrap{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.toggle{position:relative;width:36px;height:20px;flex-shrink:0}
+.toggle input{opacity:0;width:0;height:0;position:absolute}
+.toggle-slider{position:absolute;inset:0;background:#cbd5e1;border-radius:20px;cursor:pointer;transition:background .2s}
+.toggle-slider::before{content:'';position:absolute;width:14px;height:14px;left:3px;top:3px;background:#fff;border-radius:50%;transition:transform .2s}
+.toggle input:checked+.toggle-slider{background:var(--green)}
+.toggle input:checked+.toggle-slider::before{transform:translateX(16px)}
+.toggle-lbl{font-size:10px;font-weight:700;color:var(--sub);width:22px}
+.toggle input:checked~.toggle-lbl-on{color:var(--green)}
 .card-hdr-btn{background:transparent;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.5);border-radius:6px;padding:5px 10px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Figtree',sans-serif;transition:all .15s}
 .card-hdr-btn:hover{color:#fff;border-color:rgba(255,255,255,.4)}
 </style>
@@ -218,9 +227,24 @@ async function publish(){
     else{logLine('No data.json yet — creating','warn');}
     currentData.months[month]={month,techs};currentData.updatedAt=new Date().toISOString();
     logLine('Committing to GitHub…');
-    const res=await ghPut(dataPath,JSON.stringify(currentData,null,2),sha);
-    if(res.ok){logLine(`✓ Published ${month}! Live in ~30s.`,'ok');refreshHistory();refreshLinks();}
-    else{const err=await res.json();logLine(`✗ GitHub: ${err.message}`,'err');}
+    const newJson=JSON.stringify(currentData,null,2);
+    // Use the SHA we just fetched — it's the freshest possible
+    let res=await ghPut(dataPath,newJson,existing?.sha||null);
+    if(!res.ok){
+      const errBody=await res.clone().json().catch(()=>({}));
+      if((errBody.message||'').includes('does not match')){
+        // SHA changed between fetch and put — retry once with absolute latest
+        logLine('SHA changed — retrying once…','warn');
+        const latest=await ghGet(dataPath);
+        let latestData={months:{},updatedAt:null};
+        if(latest){try{latestData=JSON.parse(decodeURIComponent(escape(atob(latest.content.replace(/\n/g,'')))));}catch{}}
+        latestData.months[month]={month,techs};
+        latestData.updatedAt=new Date().toISOString();
+        res=await ghPut(dataPath,JSON.stringify(latestData,null,2),latest?.sha||null);
+      }
+    }
+    if(res.ok){logLine(`✓ Published ${month}! Live in ~30s.`,'ok');refreshHistory();refreshLinks();refreshRoster();}
+    else{const err=await res.json().catch(()=>({}));logLine(`✗ GitHub: ${err.message||'Unknown error'}`,'err');}
   }catch(e){logLine(`✗ Error: ${e.message}`,'err');}
   btn.disabled=false;btn.textContent='🚀 Publish';checkReady();
 }
@@ -299,12 +323,10 @@ async function refreshRoster(){
 function onRosterChange(sel){
   const isEligible = ELIGIBLE_CLASSES.includes(sel.value);
   sel.className = 'roster-select ' + (isEligible?'eligible':'ineligible');
-  const slug = toSlug(sel.dataset.name);
-  const badge = document.getElementById('badge-'+slug);
-  if(badge){
-    badge.className = isEligible?'eligible-badge':'ineligible-badge';
-    badge.textContent = isEligible?'✓ Eligible':'Not eligible';
-  }
+  document.getElementById('btnSaveRoster').style.display = 'inline-block';
+}
+
+function onToggleChange(chk){
   document.getElementById('btnSaveRoster').style.display = 'inline-block';
 }
 
@@ -320,12 +342,17 @@ async function saveRoster(){
   try{data=JSON.parse(decodeURIComponent(escape(atob(existing.content.replace(/\n/g,'')))));}
   catch{alert('Could not parse data.json');btn.textContent='💾 Save Roster';btn.disabled=false;return;}
 
-  // Read all select values
+  // Read all select values + toggle states
   const roster = {};
+  const active = {};
   document.querySelectorAll('.roster-select').forEach(sel => {
     if(sel.value) roster[sel.dataset.name] = sel.value;
   });
+  document.querySelectorAll('.toggle input[type=checkbox]').forEach(chk => {
+    active[chk.dataset.name] = chk.checked;
+  });
   data.roster = roster;
+  data.active = active;
   data.updatedAt = new Date().toISOString();
 
   const res = await ghPut(cfg.path||'data.json', JSON.stringify(data,null,2), existing.sha);
@@ -343,3 +370,4 @@ async function saveRoster(){
 </script>
 </body>
 </html>
+
