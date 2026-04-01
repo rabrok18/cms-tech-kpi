@@ -102,5 +102,13 @@
       }
     }
   },
-  "updatedAt": "2026-04-01T16:09:53.854Z"
+  "updatedAt": "2026-04-01T16:12:20.918Z",
+  "roster": {
+    "Chad Tomaseck": "1st Year Apprentice",
+    "Connor Miller": "5th Year Apprentice",
+    "David Sztuba": "5th Year Apprentice",
+    "Kevin Burke": "Journeyman",
+    "Ray Dejesus": "Journeyman",
+    "Robert Marsh": "Journeyman"
+  }
 }
