@@ -8,7 +8,7 @@
           "avgDev": 0.93,
           "jobs": 5,
           "rec": null,
-          "drv": 81,
+          "drv": 75,
           "devPass": true,
           "recPass": null,
           "drvPass": true,
@@ -20,7 +20,7 @@
           "avgDev": 0.7116666666666667,
           "jobs": 18,
           "rec": 31,
-          "drv": 90,
+          "drv": 86,
           "devPass": true,
           "recPass": true,
           "drvPass": true,
@@ -44,19 +44,19 @@
           "avgDev": 0.10200000000000001,
           "jobs": 15,
           "rec": 14,
-          "drv": 81,
+          "drv": 74,
           "devPass": true,
           "recPass": false,
-          "drvPass": true,
-          "passCount": 2,
-          "monthPass": true
+          "drvPass": false,
+          "passCount": 1,
+          "monthPass": false
         },
         "Ray Dejesus": {
           "name": "Ray Dejesus",
           "avgDev": 0.34714285714285714,
           "jobs": 14,
           "rec": 13,
-          "drv": 81,
+          "drv": 83,
           "devPass": true,
           "recPass": false,
           "drvPass": true,
@@ -68,15 +68,39 @@
           "avgDev": 2.1161538461538463,
           "jobs": 13,
           "rec": 2,
-          "drv": 65,
+          "drv": 66,
           "devPass": false,
           "recPass": false,
           "drvPass": false,
           "passCount": 0,
           "monthPass": false
+        },
+        "Box Truck Truck 130": {
+          "name": "Box Truck Truck 130",
+          "avgDev": null,
+          "jobs": 0,
+          "rec": null,
+          "drv": 90,
+          "devPass": null,
+          "recPass": null,
+          "drvPass": true,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "Christopher Primamore": {
+          "name": "Christopher Primamore",
+          "avgDev": null,
+          "jobs": 0,
+          "rec": null,
+          "drv": 78,
+          "devPass": null,
+          "recPass": null,
+          "drvPass": true,
+          "passCount": 1,
+          "monthPass": false
         }
       }
     }
   },
-  "updatedAt": "2026-04-01T15:58:12.281Z"
+  "updatedAt": "2026-04-01T16:09:53.854Z"
 }
