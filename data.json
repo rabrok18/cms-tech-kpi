@@ -1,1 +1,82 @@
-{ "months": {}, "updatedAt": null }
+{
+  "months": {
+    "Jan 2026": {
+      "month": "Jan 2026",
+      "techs": {
+        "Chad Tomaseck": {
+          "name": "Chad Tomaseck",
+          "avgDev": 0.93,
+          "jobs": 5,
+          "rec": null,
+          "drv": 81,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": true,
+          "passCount": 2,
+          "monthPass": true
+        },
+        "Connor Miller": {
+          "name": "Connor Miller",
+          "avgDev": 0.7116666666666667,
+          "jobs": 18,
+          "rec": 31,
+          "drv": 90,
+          "devPass": true,
+          "recPass": true,
+          "drvPass": true,
+          "passCount": 3,
+          "monthPass": true
+        },
+        "David Sztuba": {
+          "name": "David Sztuba",
+          "avgDev": 0.15161290322580645,
+          "jobs": 31,
+          "rec": 19,
+          "drv": 88,
+          "devPass": true,
+          "recPass": false,
+          "drvPass": true,
+          "passCount": 2,
+          "monthPass": true
+        },
+        "Kevin Burke": {
+          "name": "Kevin Burke",
+          "avgDev": 0.10200000000000001,
+          "jobs": 15,
+          "rec": 14,
+          "drv": 81,
+          "devPass": true,
+          "recPass": false,
+          "drvPass": true,
+          "passCount": 2,
+          "monthPass": true
+        },
+        "Ray Dejesus": {
+          "name": "Ray Dejesus",
+          "avgDev": 0.34714285714285714,
+          "jobs": 14,
+          "rec": 13,
+          "drv": 81,
+          "devPass": true,
+          "recPass": false,
+          "drvPass": true,
+          "passCount": 2,
+          "monthPass": true
+        },
+        "Robert Marsh": {
+          "name": "Robert Marsh",
+          "avgDev": 2.1161538461538463,
+          "jobs": 13,
+          "rec": 2,
+          "drv": 65,
+          "devPass": false,
+          "recPass": false,
+          "drvPass": false,
+          "passCount": 0,
+          "monthPass": false
+        }
+      }
+    }
+  },
+  "updatedAt": "2026-04-01T15:55:17.243Z"
+}
