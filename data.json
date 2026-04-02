@@ -292,7 +292,7 @@
       }
     }
   },
-  "updatedAt": "2026-04-02T17:14:46.089Z",
+  "updatedAt": "2026-04-02T17:15:11.354Z",
   "roster": {
     "Chad Tomaseck": "1st Year Apprentice",
     "Christopher Primamore": "3rd Year Apprentice",
@@ -308,7 +308,7 @@
     "Connor Miller": true,
     "David Sztuba": true,
     "Kevin Burke": true,
-    "Kevin David": true,
+    "Kevin David": false,
     "Ray Dejesus": true,
     "Robert Marsh": true,
     "Stephen Handrik": true
