@@ -5,7 +5,7 @@
       "techs": {
         "Chad Tomaseck": {
           "name": "Chad Tomaseck",
-          "avgDev": -1.467,
+          "avgDev": -1.443,
           "jobs": 10,
           "rec": 8,
           "drv": 70,
@@ -15,10 +15,22 @@
           "passCount": 1,
           "monthPass": false
         },
+        "Christopher Primamore": {
+          "name": "Christopher Primamore",
+          "avgDev": -0.2677777777777778,
+          "jobs": 9,
+          "rec": 18,
+          "drv": 76,
+          "devPass": true,
+          "recPass": false,
+          "drvPass": true,
+          "passCount": 2,
+          "monthPass": true
+        },
         "Connor Miller": {
           "name": "Connor Miller",
-          "avgDev": -2.0986956521739133,
-          "jobs": 23,
+          "avgDev": -2.1568,
+          "jobs": 25,
           "rec": 25,
           "drv": 85,
           "devPass": true,
@@ -29,8 +41,8 @@
         },
         "David Sztuba": {
           "name": "David Sztuba",
-          "avgDev": -2.5338709677419353,
-          "jobs": 31,
+          "avgDev": -2.3666666666666667,
+          "jobs": 30,
           "rec": 36,
           "drv": 88,
           "devPass": true,
@@ -41,31 +53,31 @@
         },
         "Kevin Burke": {
           "name": "Kevin Burke",
-          "avgDev": 0.04857142857142858,
+          "avgDev": -0.2507142857142857,
           "jobs": 14,
           "rec": 26,
           "drv": 71,
-          "devPass": false,
+          "devPass": true,
           "recPass": true,
           "drvPass": false,
-          "passCount": 1,
-          "monthPass": false
+          "passCount": 2,
+          "monthPass": true
         },
         "Ray Dejesus": {
           "name": "Ray Dejesus",
-          "avgDev": 0.013846153846153845,
+          "avgDev": -0.2353846153846154,
           "jobs": 13,
           "rec": 5,
           "drv": 85,
-          "devPass": false,
+          "devPass": true,
           "recPass": false,
           "drvPass": true,
-          "passCount": 1,
-          "monthPass": false
+          "passCount": 2,
+          "monthPass": true
         },
         "Robert Marsh": {
           "name": "Robert Marsh",
-          "avgDev": -0.8,
+          "avgDev": -0.455,
           "jobs": 2,
           "rec": null,
           "drv": 72,
@@ -75,16 +87,16 @@
           "passCount": 1,
           "monthPass": false
         },
-        "Christopher Primamore": {
-          "name": "Christopher Primamore",
+        "Stephen Handrik": {
+          "name": "Stephen Handrik",
           "avgDev": null,
           "jobs": 0,
-          "rec": null,
-          "drv": 76,
+          "rec": 0,
+          "drv": null,
           "devPass": null,
-          "recPass": null,
-          "drvPass": true,
-          "passCount": 1,
+          "recPass": false,
+          "drvPass": null,
+          "passCount": 0,
           "monthPass": false
         }
       }
@@ -280,7 +292,7 @@
       }
     }
   },
-  "updatedAt": "2026-04-02T17:01:55.186Z",
+  "updatedAt": "2026-04-02T17:02:25.545Z",
   "roster": {
     "Box Truck Truck 130": "Other / Not Participating",
     "Chad Tomaseck": "1st Year Apprentice",
