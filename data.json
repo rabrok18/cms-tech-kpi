@@ -5,7 +5,6 @@
       "techs": {
         "Chad Tomaseck": {
           "name": "Chad Tomaseck",
-          "avgDev": 0.93,
           "jobs": 5,
           "rec": null,
           "drv": 75,
@@ -13,11 +12,11 @@
           "recPass": null,
           "drvPass": true,
           "passCount": 2,
-          "monthPass": true
+          "monthPass": true,
+          "hrsDev": 4.65
         },
         "Connor Miller": {
           "name": "Connor Miller",
-          "avgDev": 0.7116666666666667,
           "jobs": 18,
           "rec": 31,
           "drv": 86,
@@ -25,11 +24,11 @@
           "recPass": true,
           "drvPass": true,
           "passCount": 3,
-          "monthPass": true
+          "monthPass": true,
+          "hrsDev": 12.81
         },
         "David Sztuba": {
           "name": "David Sztuba",
-          "avgDev": 0.15161290322580645,
           "jobs": 31,
           "rec": 19,
           "drv": 88,
@@ -37,11 +36,11 @@
           "recPass": false,
           "drvPass": true,
           "passCount": 2,
-          "monthPass": true
+          "monthPass": true,
+          "hrsDev": 4.7
         },
         "Kevin Burke": {
           "name": "Kevin Burke",
-          "avgDev": 0.10200000000000001,
           "jobs": 15,
           "rec": 14,
           "drv": 74,
@@ -49,11 +48,11 @@
           "recPass": false,
           "drvPass": false,
           "passCount": 1,
-          "monthPass": false
+          "monthPass": false,
+          "hrsDev": 1.53
         },
         "Ray Dejesus": {
           "name": "Ray Dejesus",
-          "avgDev": 0.34714285714285714,
           "jobs": 14,
           "rec": 13,
           "drv": 83,
@@ -61,23 +60,23 @@
           "recPass": false,
           "drvPass": true,
           "passCount": 2,
-          "monthPass": true
+          "monthPass": true,
+          "hrsDev": 4.86
         },
         "Robert Marsh": {
           "name": "Robert Marsh",
-          "avgDev": 2.1161538461538463,
           "jobs": 13,
           "rec": 2,
           "drv": 66,
-          "devPass": false,
+          "devPass": true,
           "recPass": false,
           "drvPass": false,
-          "passCount": 0,
-          "monthPass": false
+          "passCount": 1,
+          "monthPass": false,
+          "hrsDev": 27.51
         },
         "Box Truck Truck 130": {
           "name": "Box Truck Truck 130",
-          "avgDev": null,
           "jobs": 0,
           "rec": null,
           "drv": 90,
@@ -85,11 +84,11 @@
           "recPass": null,
           "drvPass": true,
           "passCount": 1,
-          "monthPass": false
+          "monthPass": false,
+          "hrsDev": null
         },
         "Christopher Primamore": {
           "name": "Christopher Primamore",
-          "avgDev": null,
           "jobs": 0,
           "rec": null,
           "drv": 78,
@@ -97,7 +96,8 @@
           "recPass": null,
           "drvPass": true,
           "passCount": 1,
-          "monthPass": false
+          "monthPass": false,
+          "hrsDev": null
         }
       }
     },
@@ -106,7 +106,6 @@
       "techs": {
         "Chad Tomaseck": {
           "name": "Chad Tomaseck",
-          "avgDev": 0.034,
           "jobs": 5,
           "rec": 6,
           "drv": 76,
@@ -114,11 +113,11 @@
           "recPass": false,
           "drvPass": true,
           "passCount": 2,
-          "monthPass": true
+          "monthPass": true,
+          "hrsDev": 0.17
         },
         "Connor Miller": {
           "name": "Connor Miller",
-          "avgDev": 0.21235294117647058,
           "jobs": 17,
           "rec": 38,
           "drv": 83,
@@ -126,11 +125,11 @@
           "recPass": true,
           "drvPass": true,
           "passCount": 3,
-          "monthPass": true
+          "monthPass": true,
+          "hrsDev": 3.61
         },
         "David Sztuba": {
           "name": "David Sztuba",
-          "avgDev": 1.2885714285714285,
           "jobs": 21,
           "rec": 30,
           "drv": 89,
@@ -138,11 +137,11 @@
           "recPass": true,
           "drvPass": true,
           "passCount": 3,
-          "monthPass": true
+          "monthPass": true,
+          "hrsDev": 27.06
         },
         "Kevin Burke": {
           "name": "Kevin Burke",
-          "avgDev": 1.7675,
           "jobs": 8,
           "rec": 31,
           "drv": 71,
@@ -150,11 +149,11 @@
           "recPass": true,
           "drvPass": false,
           "passCount": 2,
-          "monthPass": true
+          "monthPass": true,
+          "hrsDev": 14.14
         },
         "Ray Dejesus": {
           "name": "Ray Dejesus",
-          "avgDev": 0.31941176470588234,
           "jobs": 17,
           "rec": 8,
           "drv": 84,
@@ -162,23 +161,23 @@
           "recPass": false,
           "drvPass": true,
           "passCount": 2,
-          "monthPass": true
+          "monthPass": true,
+          "hrsDev": 5.43
         },
         "Robert Marsh": {
           "name": "Robert Marsh",
-          "avgDev": 2.7933333333333334,
           "jobs": 3,
           "rec": 5,
           "drv": 65,
-          "devPass": false,
+          "devPass": true,
           "recPass": false,
           "drvPass": false,
-          "passCount": 0,
-          "monthPass": false
+          "passCount": 1,
+          "monthPass": false,
+          "hrsDev": 8.38
         },
         "Christopher Primamore": {
           "name": "Christopher Primamore",
-          "avgDev": null,
           "jobs": 0,
           "rec": null,
           "drv": 80,
@@ -186,7 +185,8 @@
           "recPass": null,
           "drvPass": true,
           "passCount": 1,
-          "monthPass": false
+          "monthPass": false,
+          "hrsDev": null
         }
       }
     },
@@ -195,7 +195,6 @@
       "techs": {
         "Chad Tomaseck": {
           "name": "Chad Tomaseck",
-          "avgDev": 1.467,
           "jobs": 10,
           "rec": 8,
           "drv": 70,
@@ -203,35 +202,35 @@
           "recPass": false,
           "drvPass": false,
           "passCount": 1,
-          "monthPass": false
+          "monthPass": false,
+          "hrsDev": 14.67
         },
         "Connor Miller": {
           "name": "Connor Miller",
-          "avgDev": 2.0986956521739133,
           "jobs": 23,
           "rec": 25,
           "drv": 85,
-          "devPass": false,
+          "devPass": true,
           "recPass": true,
           "drvPass": true,
-          "passCount": 2,
-          "monthPass": true
+          "passCount": 3,
+          "monthPass": true,
+          "hrsDev": 48.27
         },
         "David Sztuba": {
           "name": "David Sztuba",
-          "avgDev": 2.5338709677419353,
           "jobs": 31,
           "rec": 36,
           "drv": 88,
-          "devPass": false,
+          "devPass": true,
           "recPass": true,
           "drvPass": true,
-          "passCount": 2,
-          "monthPass": true
+          "passCount": 3,
+          "monthPass": true,
+          "hrsDev": 78.55
         },
         "Kevin Burke": {
           "name": "Kevin Burke",
-          "avgDev": 0.04857142857142858,
           "jobs": 14,
           "rec": 26,
           "drv": 71,
@@ -239,11 +238,11 @@
           "recPass": true,
           "drvPass": false,
           "passCount": 2,
-          "monthPass": true
+          "monthPass": true,
+          "hrsDev": 0.68
         },
         "Ray Dejesus": {
           "name": "Ray Dejesus",
-          "avgDev": 0.013846153846153845,
           "jobs": 13,
           "rec": 5,
           "drv": 85,
@@ -251,11 +250,11 @@
           "recPass": false,
           "drvPass": true,
           "passCount": 2,
-          "monthPass": true
+          "monthPass": true,
+          "hrsDev": 0.18
         },
         "Robert Marsh": {
           "name": "Robert Marsh",
-          "avgDev": 0.8,
           "jobs": 2,
           "rec": null,
           "drv": 72,
@@ -263,11 +262,11 @@
           "recPass": null,
           "drvPass": false,
           "passCount": 1,
-          "monthPass": false
+          "monthPass": false,
+          "hrsDev": 1.6
         },
         "Christopher Primamore": {
           "name": "Christopher Primamore",
-          "avgDev": null,
           "jobs": 0,
           "rec": null,
           "drv": 76,
@@ -275,7 +274,8 @@
           "recPass": null,
           "drvPass": true,
           "passCount": 1,
-          "monthPass": false
+          "monthPass": false,
+          "hrsDev": null
         }
       }
     }

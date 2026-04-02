@@ -87,6 +87,7 @@ body{font-family:'Figtree',sans-serif;background:var(--bg);color:var(--text);min
 .roster-select:focus{outline:none;border-color:var(--amber)}
 .roster-select.eligible{border-color:var(--gbd);background:var(--glt)}
 .roster-select.ineligible{border-color:var(--border);background:var(--bg)}
+#rosterList{max-height:480px;overflow-y:auto}
 /* Toggle switch */
 .toggle-wrap{display:flex;align-items:center;gap:6px;flex-shrink:0}
 .toggle{position:relative;width:36px;height:20px;flex-shrink:0}
@@ -202,7 +203,7 @@ function toggleToken(){const i=document.getElementById('ghToken'),b=i.nextElemen
 function handleFile(input,key){const f=input.files[0];if(!f)return;raw[key]=f;document.getElementById('fn-'+key).textContent=f.name;document.getElementById('sl-'+key).classList.add('loaded');checkReady();}
 function checkReady(){const cfg=getCfg();document.getElementById('btnPub').disabled=!(raw.dev&&raw.rec&&raw.drv&&document.getElementById('monthSel').value&&cfg.owner&&cfg.repo&&cfg.token);}
 function readXlsx(f){return new Promise(res=>{const fr=new FileReader();fr.onload=e=>res(XLSX.read(e.target.result,{type:'binary'}));fr.readAsBinaryString(f);})}
-function parseDev(wb){const rows=XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]],{header:1});const map={};for(let i=1;i<rows.length;i++){const r=rows[i];if(!r[2])continue;if(!map[r[2]])map[r[2]]={jobs:r[3]||0,sumDev:r[4]||0};}const out={};for(const[n,d]of Object.entries(map))out[n]={avgDev:d.jobs>0?d.sumDev/d.jobs:0,jobs:d.jobs};return out;}
+function parseDev(wb){const rows=XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]],{header:1});const map={};for(let i=1;i<rows.length;i++){const r=rows[i];if(!r[2])continue;if(!map[r[2]])map[r[2]]={jobs:r[3]||0,sumDev:r[4]||0};}const out={};for(const[n,d]of Object.entries(map))out[n]={hrsDev:d.sumDev,jobs:d.jobs};return out;}
 function parseRec(wb){const rows=XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]],{header:1});const out={};for(let i=1;i<rows.length;i++){const r=rows[i];if(r[3])out[r[3]]=r[4]??null;}return out;}
 function parseDrv(wb){const rows=XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]],{header:1});const out={};let go=false;for(const r of rows){if(!r||!r[0])continue;if(r[0]==='Driver'){go=true;continue;}if(go&&typeof r[0]==='string'&&r[3]!==undefined)out[r[0]]=r[3];}return out;}
 function logLine(msg,type='info'){const el=document.getElementById('log');el.classList.add('show');const d=document.createElement('div');d.className=`ll ll-${type}`;d.textContent=`[${new Date().toLocaleTimeString()}] ${msg}`;el.appendChild(d);el.scrollTop=el.scrollHeight;}
@@ -218,7 +219,7 @@ async function publish(){
     const devD=parseDev(dWb),recD=parseRec(rWb),drvD=parseDrv(drWb);
     const names=new Set([...Object.keys(devD),...Object.keys(recD),...Object.keys(drvD)]);
     const techs={};
-    for(const name of names){const dv=devD[name]??null,rc=recD[name]??null,dr=drvD[name]??null;const devPass=dv!==null?dv.avgDev<=0:null;const recPass=rc!==null?rc>=20:null;const drvPass=dr!==null?dr>=75:null;const scored=[devPass,recPass,drvPass].filter(v=>v!==null);const passCount=scored.filter(Boolean).length;techs[name]={name,avgDev:dv?.avgDev??null,jobs:dv?.jobs??0,rec:rc,drv:dr,devPass,recPass,drvPass,passCount,monthPass:scored.length>0?passCount>=2:null};}
+    for(const name of names){const dv=devD[name]??null,rc=recD[name]??null,dr=drvD[name]??null;const devPass=dv!==null?dv.hrsDev>=0:null;const recPass=rc!==null?rc>=20:null;const drvPass=dr!==null?dr>=75:null;const scored=[devPass,recPass,drvPass].filter(v=>v!==null);const passCount=scored.filter(Boolean).length;techs[name]={name,hrsDev:dv?.hrsDev??null,jobs:dv?.jobs??0,rec:rc,drv:dr,devPass,recPass,drvPass,passCount,monthPass:scored.length>0?passCount>=2:null};}
     logLine(`Parsed ${Object.keys(techs).length} techs for ${month}`,'ok');
     logLine('Fetching data.json…');
     const dataPath=cfg.path||'data.json';const existing=await ghGet(dataPath);

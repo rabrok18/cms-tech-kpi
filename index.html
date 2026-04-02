@@ -100,6 +100,40 @@ body{font-family:'Figtree',sans-serif;background:var(--bg);color:var(--text);min
 .qvc-partial{background:#fffbeb;color:#92400e;border:1px solid #fde68a}
 .qstat-card.partial{background:#fffbeb;border-color:#fde68a}
 .qs-verdict.vp{color:#92400e}
+
+/* TECH DETAIL VIEW */
+.td-back{display:inline-flex;align-items:center;gap:4px;font-size:13px;font-weight:600;color:var(--sub);text-decoration:none;margin-bottom:10px;transition:color .15s}
+.td-back:hover{color:var(--text)}
+.td-hero{background:var(--navy);border-radius:var(--r);padding:22px 20px 18px;margin-bottom:14px}
+.td-hero-top{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.td-avatar{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--amber),var(--gold));display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff}
+.td-hero-info{flex:1}
+.td-name{font-size:22px;font-weight:900;color:#fff;line-height:1.1}
+.td-class{font-size:12px;color:rgba(255,255,255,.5);margin-top:3px}
+.td-stat-row{display:flex;gap:10px;margin-top:10px}
+.td-stat{flex:1;text-align:center;background:rgba(255,255,255,.06);border-radius:8px;padding:8px 6px}
+.td-stat-val{font-family:'DM Mono',monospace;font-size:20px;font-weight:500;color:var(--gold);line-height:1}
+.td-stat-lbl{font-size:9px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
+.td-kpi-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.td-kpi{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:14px;text-align:center}
+.td-kpi-icon{font-size:22px;margin-bottom:4px}
+.td-kpi-name{font-size:11px;font-weight:700;color:var(--sub);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.td-kpi-val{font-family:'DM Mono',monospace;font-size:18px;font-weight:600;line-height:1}
+.td-kpi-goal{font-size:10px;color:var(--sub);margin-top:3px}
+.td-kpi.pass{border-color:var(--gbd);background:var(--glt)}
+.td-kpi.pass .td-kpi-val{color:var(--green)}
+.td-kpi.fail{border-color:var(--rbd);background:var(--rlt)}
+.td-kpi.fail .td-kpi-val{color:var(--red)}
+.td-kpi.na{opacity:.5}
+.td-month-tbl{width:100%;border-collapse:collapse;font-size:12px}
+.td-month-tbl th{text-align:left;padding:8px 10px;font-size:10px;font-weight:700;color:var(--sub);text-transform:uppercase;letter-spacing:.5px;border-bottom:2px solid var(--border)}
+.td-month-tbl td{padding:8px 10px;border-bottom:1px solid var(--border)}
+.td-month-tbl tr:last-child td{border-bottom:none}
+.td-pill{display:inline-block;padding:2px 8px;border-radius:6px;font-size:11px;font-weight:700}
+.td-pill.pass{background:var(--glt);color:var(--green)}
+.td-pill.fail{background:var(--rlt);color:var(--red)}
+.td-pill.na{background:var(--bg);color:var(--sub)}
+@media(max-width:400px){.td-kpi-grid{grid-template-columns:1fr}.td-stat-row{flex-wrap:wrap}}
 </style>
 </head>
 <body>
@@ -191,12 +225,150 @@ async function init(){
   if(!data||!Object.keys(data.months||{}).length){showErr('No data published yet.');return;}
   if(data.updatedAt)document.getElementById('hdrDate').textContent=new Date(data.updatedAt).toLocaleDateString('en-US',{month:'short',day:'numeric'});
   data=filterEligible(data);
+  // Check for ?tech= parameter — show detail view for that tech
+  const params=new URLSearchParams(location.search);
+  const techSlug=params.get('tech');
+  if(techSlug){
+    const names=allNames(data.months);
+    const match=names.find(n=>toSlug(n)===techSlug);
+    if(match){renderTechDetail(match,data);return;}
+  }
   renderLeaderboard(data);
 }
 
 function showErr(msg){document.getElementById('wrap').innerHTML=`<div class="no-data"><div class="icon">📊</div><p>${msg}</p></div>`;}
 
-// ── RENDER ────────────────────────────────────────────────────
+// ── TECH DETAIL VIEW ─────────────────────────────────────────
+function renderTechDetail(name,data){
+  const months=sortedMonths(data.months);
+  const score=yearScore(name,data.months);
+  const cls=data.roster?.[name]||'';
+  const qs=qStatus(name,data.months);
+  const names=allNames(data.months);
+  const lb=names.map(n=>({name:n,score:yearScore(n,data.months)})).sort((a,b)=>b.score-a.score);
+  const rank=lb.findIndex(t=>t.name===name)+1;
+
+  // Latest month KPIs
+  const latestMon=months[months.length-1];
+  const latestData=data.months[latestMon]?.techs[name]||{};
+
+  // Quarterly goals info
+  const qGoals=qs?qs.qMons.reduce((sum,mk)=>(sum+(data.months[mk]?.techs[name]?.passCount||0)),0):0;
+  const qLoaded=qs?qs.loaded.length:0;
+  const qMaxGoals=qLoaded*3;
+
+  const wrap=document.getElementById('wrap');
+  wrap.innerHTML=`
+    <a class="td-back" href="index.html">&#8592; Back to Leaderboard</a>
+    <div class="td-hero">
+      <div class="td-hero-top">
+        <div class="td-avatar">${initials(name)}</div>
+        <div class="td-hero-info">
+          <div class="td-name">${name}</div>
+          <div class="td-class">${cls||'Unclassified'} · Rank #${rank} of ${lb.length}</div>
+        </div>
+      </div>
+      <div class="td-stat-row">
+        <div class="td-stat"><div class="td-stat-val">${score}</div><div class="td-stat-lbl">YTD Score</div></div>
+        <div class="td-stat"><div class="td-stat-val">${MAX}</div><div class="td-stat-lbl">Max Possible</div></div>
+        <div class="td-stat"><div class="td-stat-val">#${rank}</div><div class="td-stat-lbl">Rank</div></div>
+        <div class="td-stat"><div class="td-stat-val">${qs?qs.curQ:'—'}</div><div class="td-stat-lbl">Quarter</div></div>
+      </div>
+    </div>
+
+    <div class="sec">Latest Month — ${latestMon}</div>
+    <div class="td-kpi-grid">
+      <div class="td-kpi ${latestData.devPass===true?'pass':latestData.devPass===false?'fail':'na'}">
+        <div class="td-kpi-icon">🔧</div>
+        <div class="td-kpi-name">Hrs Deviation</div>
+        <div class="td-kpi-val">${latestData.hrsDev!=null?latestData.hrsDev.toFixed(1)+' hrs':'N/A'}</div>
+        <div class="td-kpi-goal">Goal: ≥ 0 hrs</div>
+      </div>
+      <div class="td-kpi ${latestData.recPass===true?'pass':latestData.recPass===false?'fail':'na'}">
+        <div class="td-kpi-icon">⭐</div>
+        <div class="td-kpi-name">Recommendations</div>
+        <div class="td-kpi-val">${latestData.rec!=null?latestData.rec:'N/A'}</div>
+        <div class="td-kpi-goal">Goal: ≥ 20</div>
+      </div>
+      <div class="td-kpi ${latestData.drvPass===true?'pass':latestData.drvPass===false?'fail':'na'}">
+        <div class="td-kpi-icon">🚗</div>
+        <div class="td-kpi-name">Driver Score</div>
+        <div class="td-kpi-val">${latestData.drv!=null?latestData.drv+'%':'N/A'}</div>
+        <div class="td-kpi-goal">Goal: ≥ 75%</div>
+      </div>
+    </div>
+
+    <div class="sec">Month-by-Month Breakdown</div>
+    <div class="card">
+      <div class="card-navy-hdr"><div class="card-navy-title">${name} — All Months</div></div>
+      <div class="card-body" style="padding:0;overflow-x:auto">
+        <table class="td-month-tbl">
+          <thead><tr><th>Month</th><th>Deviation</th><th>Recs</th><th>Driver</th><th>Goals</th><th>Pass</th></tr></thead>
+          <tbody>${months.map(mk=>{
+            const t=data.months[mk]?.techs[name];
+            if(!t)return`<tr><td>${mk}</td><td colspan="5" style="color:var(--sub)">No data</td></tr>`;
+            return`<tr>
+              <td style="font-weight:700">${mk}</td>
+              <td><span class="td-pill ${t.devPass===true?'pass':t.devPass===false?'fail':'na'}">${t.hrsDev!=null?t.hrsDev.toFixed(1)+' hrs':'—'}</span></td>
+              <td><span class="td-pill ${t.recPass===true?'pass':t.recPass===false?'fail':'na'}">${t.rec!=null?t.rec:'—'}</span></td>
+              <td><span class="td-pill ${t.drvPass===true?'pass':t.drvPass===false?'fail':'na'}">${t.drv!=null?t.drv+'%':'—'}</span></td>
+              <td style="font-family:'DM Mono',monospace;font-weight:600">${t.passCount}/3</td>
+              <td><span class="td-pill ${t.monthPass===true?'pass':t.monthPass===false?'fail':'na'}">${t.monthPass===true?'Yes':t.monthPass===false?'No':'—'}</span></td>
+            </tr>`;
+          }).join('')}</tbody>
+        </table>
+      </div>
+    </div>
+
+    ${qs?`<div class="sec">${qs.curQ} ${qs.ly} — Quarterly Bonus</div>
+    <div class="card">
+      <div class="card-navy-hdr"><div class="card-navy-title">${qs.curQ} Bonus Tracker</div></div>
+      <div class="card-body">
+        <div style="display:flex;gap:10px;justify-content:center;margin-bottom:12px">${qs.qMons.map((mk,i)=>{
+          const v=qs.results[i];
+          return`<div style="text-align:center;flex:1">
+            <div style="font-size:28px;line-height:1">${v===true?'✅':v===false?'❌':'⏳'}</div>
+            <div style="font-size:11px;color:var(--sub);margin-top:4px">${mk}</div>
+          </div>`;
+        }).join('')}</div>
+        <div style="text-align:center;font-size:13px;color:var(--sub)">
+          Goals hit: <strong style="color:var(--text)">${qGoals}</strong> / ${qMaxGoals}
+          ${qLoaded===3?`<br>Payout: <strong style="color:${qPayout(qs.loaded.filter(Boolean).length)>0?'var(--green)':'var(--red)'}">$${qPayout(qs.loaded.filter(Boolean).length)}</strong>`:''}
+        </div>
+      </div>
+    </div>`:''}
+
+    <div class="sec">Score Trend</div>
+    <div class="card">
+      <div class="card-navy-hdr"><div class="card-navy-title">${name} — Monthly Goals</div></div>
+      <div class="card-body"><div class="chart-wrap"><canvas id="chartTechTrend"></canvas></div></div>
+    </div>
+  `;
+
+  // Render trend chart for this tech
+  requestAnimationFrame(()=>{
+    const canvas=document.getElementById('chartTechTrend');if(!canvas)return;
+    const labels=months.map(mk=>mk.split(' ')[0]);
+    const scores=months.map(mk=>data.months[mk]?.techs[name]?.passCount??null);
+    charts.techTrend=new Chart(canvas,{
+      type:'line',
+      data:{labels,datasets:[{
+        label:'Goals Hit',data:scores,
+        borderColor:'var(--amber)',backgroundColor:'rgba(239,65,54,.1)',
+        fill:true,tension:.3,pointRadius:5,pointBackgroundColor:scores.map(v=>v===3?'#15803d':v>=2?'#fbb040':'#b91c1c'),
+        pointBorderColor:'#fff',pointBorderWidth:2
+      }]},
+      options:{
+        responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`${ctx.parsed.y}/3 goals`}}},
+        scales:{
+          x:{grid:{display:false},ticks:{font:{family:'Figtree',size:11},color:'#64748b'}},
+          y:{min:0,max:3,ticks:{stepSize:1,font:{family:'Figtree',size:11},color:'#64748b'},grid:{color:'#f0f4f8'}}
+        }
+      }
+    });
+  });
+}
 function renderLeaderboard(data){
   const months=sortedMonths(data.months);
   const names=allNames(data.months);
