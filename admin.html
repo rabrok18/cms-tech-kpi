@@ -104,21 +104,6 @@ body{font-family:"Figtree",sans-serif;background:var(--bg);color:var(--text);min
 .toggle input:checked + .toggle-slider::before{transform:translateX(16px)}
 @media(max-width:600px){.cfg-grid{grid-template-columns:1fr}.slot-grid{grid-template-columns:1fr}.pub-row{grid-template-columns:1fr}}
 </style>
-<script>
-function tryLogin(){
-  const pwd=document.getElementById("pwdInput").value;
-  if(pwd==="cms2026"){
-    document.getElementById("gate").style.display="none";
-    document.getElementById("adminUI").style.display="block";
-    localStorage.setItem("cms_admin_auth","cms2026");
-    // Trigger full init once main script loads
-    window._doInit=true;
-  }else{
-    document.getElementById("pwdError").style.display="block";
-    document.getElementById("pwdInput").focus();
-  }
-}
-</script>
 </head>
 <body>
 <div class="hdr">
@@ -239,16 +224,14 @@ const raw={dev:null,rec:null,drv:null};
 const MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const ELIGIBLE=["3rd Year Apprentice","4th Year Apprentice","5th Year Apprentice","Journeyman"];
 const ALL_CLASSES=["1st Year Apprentice","2nd Year Apprentice","3rd Year Apprentice","4th Year Apprentice","5th Year Apprentice","Journeyman","Other / Not Participating"];
-// Auto-login if previously authenticated or key in URL, or after login button
+// Auth check on load
 const params=new URLSearchParams(location.search);
-const savedAuth=localStorage.getItem("cms_admin_auth");
-if(params.get("key")==="cms2026"||savedAuth==="cms2026"||window._doInit){
+if(params.get("key")==="cms2026"||localStorage.getItem("cms_admin_auth")==="cms2026"){
   document.getElementById("gate").style.display="none";
   document.getElementById("adminUI").style.display="block";
   loadConfig();refreshHistory();refreshLinks();refreshRoster();
 }
-// Override tryLogin now that all functions are defined
-window.tryLogin=function(){
+function tryLogin(){
   const pwd=document.getElementById("pwdInput").value;
   if(pwd==="cms2026"){
     document.getElementById("gate").style.display="none";
@@ -259,7 +242,7 @@ window.tryLogin=function(){
     document.getElementById("pwdError").style.display="block";
     document.getElementById("pwdInput").focus();
   }
-};
+}
 function loadConfig(){const c=JSON.parse(localStorage.getItem("cms_gh_cfg")||"{}");if(c.owner)document.getElementById("ghOwner").value=c.owner;if(c.repo)document.getElementById("ghRepo").value=c.repo;if(c.branch)document.getElementById("ghBranch").value=c.branch;if(c.path)document.getElementById("ghPath").value=c.path;if(c.token)document.getElementById("ghToken").value=c.token;if(c.siteUrl)document.getElementById("siteUrl").value=c.siteUrl;}
 function saveConfig(){localStorage.setItem("cms_gh_cfg",JSON.stringify({owner:document.getElementById("ghOwner").value.trim(),repo:document.getElementById("ghRepo").value.trim(),branch:document.getElementById("ghBranch").value.trim()||"main",path:document.getElementById("ghPath").value.trim()||"data.json",token:document.getElementById("ghToken").value.trim(),siteUrl:document.getElementById("siteUrl").value.trim().replace(/\/$/,"")}));const s=document.getElementById("savedMsg");s.style.display="inline";setTimeout(()=>s.style.display="none",2500);}
 function getCfg(){return JSON.parse(localStorage.getItem("cms_gh_cfg")||"{}")}
