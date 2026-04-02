@@ -292,7 +292,7 @@
       }
     }
   },
-  "updatedAt": "2026-04-02T17:14:26.038Z",
+  "updatedAt": "2026-04-02T17:14:46.089Z",
   "roster": {
     "Chad Tomaseck": "1st Year Apprentice",
     "Christopher Primamore": "3rd Year Apprentice",
@@ -303,7 +303,7 @@
     "Robert Marsh": "Journeyman"
   },
   "active": {
-    "Chad Tomaseck": false,
+    "Chad Tomaseck": true,
     "Christopher Primamore": true,
     "Connor Miller": true,
     "David Sztuba": true,
