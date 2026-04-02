@@ -104,9 +104,21 @@
           "passCount": 2,
           "monthPass": true
         },
+        "Christopher Primamore": {
+          "name": "Christopher Primamore",
+          "avgDev": 1.87,
+          "jobs": 2,
+          "rec": 6,
+          "drv": 80,
+          "devPass": false,
+          "recPass": false,
+          "drvPass": true,
+          "passCount": 1,
+          "monthPass": false
+        },
         "Connor Miller": {
           "name": "Connor Miller",
-          "avgDev": -0.21235294117647058,
+          "avgDev": -0.43235294117647055,
           "jobs": 17,
           "rec": 38,
           "drv": 83,
@@ -118,7 +130,7 @@
         },
         "David Sztuba": {
           "name": "David Sztuba",
-          "avgDev": -1.2885714285714285,
+          "avgDev": -1.310952380952381,
           "jobs": 21,
           "rec": 30,
           "drv": 89,
@@ -130,7 +142,7 @@
         },
         "Kevin Burke": {
           "name": "Kevin Burke",
-          "avgDev": 1.7675,
+          "avgDev": 1.7225,
           "jobs": 8,
           "rec": 31,
           "drv": 71,
@@ -138,6 +150,18 @@
           "recPass": true,
           "drvPass": false,
           "passCount": 1,
+          "monthPass": false
+        },
+        "Kevin David": {
+          "name": "Kevin David",
+          "avgDev": 0.83,
+          "jobs": 1,
+          "rec": 1,
+          "drv": null,
+          "devPass": false,
+          "recPass": false,
+          "drvPass": null,
+          "passCount": 0,
           "monthPass": false
         },
         "Ray Dejesus": {
@@ -164,16 +188,16 @@
           "passCount": 1,
           "monthPass": false
         },
-        "Christopher Primamore": {
-          "name": "Christopher Primamore",
+        "Stephen Handrik": {
+          "name": "Stephen Handrik",
           "avgDev": null,
           "jobs": 0,
-          "rec": null,
-          "drv": 80,
+          "rec": 0,
+          "drv": null,
           "devPass": null,
-          "recPass": null,
-          "drvPass": true,
-          "passCount": 1,
+          "recPass": false,
+          "drvPass": null,
+          "passCount": 0,
           "monthPass": false
         }
       }
@@ -256,7 +280,7 @@
       }
     }
   },
-  "updatedAt": "2026-04-02T15:15:05.796Z",
+  "updatedAt": "2026-04-02T17:01:55.186Z",
   "roster": {
     "Box Truck Truck 130": "Other / Not Participating",
     "Chad Tomaseck": "1st Year Apprentice",
