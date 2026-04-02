@@ -292,7 +292,7 @@
       }
     }
   },
-  "updatedAt": "2026-04-02T17:15:11.354Z",
+  "updatedAt": "2026-04-02T17:15:22.905Z",
   "roster": {
     "Chad Tomaseck": "1st Year Apprentice",
     "Christopher Primamore": "3rd Year Apprentice",
@@ -300,7 +300,8 @@
     "David Sztuba": "5th Year Apprentice",
     "Kevin Burke": "Journeyman",
     "Ray Dejesus": "Journeyman",
-    "Robert Marsh": "Journeyman"
+    "Robert Marsh": "Journeyman",
+    "Stephen Handrik": "Journeyman"
   },
   "active": {
     "Chad Tomaseck": true,
