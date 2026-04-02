@@ -116,9 +116,19 @@ body{font-family:"Figtree",sans-serif;background:var(--bg);color:var(--text);min
 <div class="gate" id="gate">
   <div class="gate-box">
     <div class="gate-icon">&#x1F512;</div>
-    <h2>Manager Access Only</h2>
-    <p>Add <code style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:12px">?key=cms2026</code> to the URL.</p>
-    <a href="index.html" style="color:var(--amber);font-size:13px;font-weight:700">&larr; View dashboard</a>
+    <h2>Manager Login</h2>
+    <p style="margin-bottom:16px">Enter your admin password to continue.</p>
+    <input id="pwdInput" type="password" placeholder="Password"
+      style="width:100%;background:#f1f5f9;border:1.5px solid #e2e8f0;border-radius:8px;padding:11px 14px;font-family:Figtree,sans-serif;font-size:15px;margin-bottom:8px;outline:none"
+      onkeydown="if(event.key==='Enter')tryLogin()"
+      onfocus="this.style.borderColor='#ef4136'"
+      onblur="this.style.borderColor='#e2e8f0'">
+    <div id="pwdError" style="display:none;font-size:12px;color:#b91c1c;margin-bottom:8px">Incorrect password.</div>
+    <button onclick="tryLogin()"
+      style="width:100%;background:linear-gradient(135deg,#ef4136,#fbb040);color:#fff;border:none;border-radius:8px;padding:12px;font-family:Figtree,sans-serif;font-weight:800;font-size:15px;cursor:pointer;margin-bottom:14px">
+      Sign In
+    </button>
+    <a href="index.html" style="color:var(--sub);font-size:12px">&larr; View dashboard</a>
   </div>
 </div>
 <div id="adminUI" style="display:none">
@@ -214,8 +224,26 @@ const raw={dev:null,rec:null,drv:null};
 const MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const ELIGIBLE=["3rd Year Apprentice","4th Year Apprentice","5th Year Apprentice","Journeyman"];
 const ALL_CLASSES=["1st Year Apprentice","2nd Year Apprentice","3rd Year Apprentice","4th Year Apprentice","5th Year Apprentice","Journeyman","Other / Not Participating"];
+function tryLogin(){
+  const pwd=document.getElementById("pwdInput").value;
+  if(pwd==="cms2026"){
+    document.getElementById("gate").style.display="none";
+    document.getElementById("adminUI").style.display="block";
+    localStorage.setItem("cms_admin_auth","cms2026");
+    loadConfig();refreshHistory();refreshLinks();refreshRoster();
+  }else{
+    document.getElementById("pwdError").style.display="block";
+    document.getElementById("pwdInput").focus();
+  }
+}
+// Auto-login if previously authenticated or key in URL
 const params=new URLSearchParams(location.search);
-if(params.get("key")==="cms2026"){document.getElementById("gate").style.display="none";document.getElementById("adminUI").style.display="block";loadConfig();refreshHistory();refreshLinks();refreshRoster();}
+const savedAuth=localStorage.getItem("cms_admin_auth");
+if(params.get("key")==="cms2026"||savedAuth==="cms2026"){
+  document.getElementById("gate").style.display="none";
+  document.getElementById("adminUI").style.display="block";
+  loadConfig();refreshHistory();refreshLinks();refreshRoster();
+}
 function loadConfig(){const c=JSON.parse(localStorage.getItem("cms_gh_cfg")||"{}");if(c.owner)document.getElementById("ghOwner").value=c.owner;if(c.repo)document.getElementById("ghRepo").value=c.repo;if(c.branch)document.getElementById("ghBranch").value=c.branch;if(c.path)document.getElementById("ghPath").value=c.path;if(c.token)document.getElementById("ghToken").value=c.token;if(c.siteUrl)document.getElementById("siteUrl").value=c.siteUrl;}
 function saveConfig(){localStorage.setItem("cms_gh_cfg",JSON.stringify({owner:document.getElementById("ghOwner").value.trim(),repo:document.getElementById("ghRepo").value.trim(),branch:document.getElementById("ghBranch").value.trim()||"main",path:document.getElementById("ghPath").value.trim()||"data.json",token:document.getElementById("ghToken").value.trim(),siteUrl:document.getElementById("siteUrl").value.trim().replace(/\/$/,"")}));const s=document.getElementById("savedMsg");s.style.display="inline";setTimeout(()=>s.style.display="none",2500);}
 function getCfg(){return JSON.parse(localStorage.getItem("cms_gh_cfg")||"{}")}
