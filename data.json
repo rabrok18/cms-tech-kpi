@@ -292,7 +292,7 @@
       }
     }
   },
-  "updatedAt": "2026-04-02T17:15:22.905Z",
+  "updatedAt": "2026-04-02T17:18:52.607Z",
   "roster": {
     "Chad Tomaseck": "1st Year Apprentice",
     "Christopher Primamore": "3rd Year Apprentice",
@@ -312,6 +312,6 @@
     "Kevin David": false,
     "Ray Dejesus": true,
     "Robert Marsh": true,
-    "Stephen Handrik": true
+    "Stephen Handrik": false
   }
 }
