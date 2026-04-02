@@ -134,18 +134,11 @@ function qPayout(totalGoals){if(totalGoals>=9)return 300;if(totalGoals>=6)return
 
 
 function filterEligible(data){
-  const hasRoster=data.roster&&Object.keys(data.roster).length>0;
   const out=JSON.parse(JSON.stringify(data));
   for(const mk of Object.keys(out.months)){
     const techs=out.months[mk].techs;
     for(const n of Object.keys(techs)){
-      // Remove if toggled off
-      if(data.active&&data.active[n]===false){delete techs[n];continue;}
-      // Remove if roster set but tech not eligible class
-      if(hasRoster){
-        const cls=data.roster[n];
-        if(!cls||!ELIGIBLE.includes(cls)){delete techs[n];continue;}
-      }
+      if(data.active&&data.active[n]===false){delete techs[n];}
     }
   }
   return out;
