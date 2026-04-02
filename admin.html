@@ -173,8 +173,6 @@ body{font-family:'Figtree',sans-serif;background:var(--bg);color:var(--text);min
     <div class="card-hdr"><div class="card-hdr-title">Published Months</div><button class="card-hdr-btn" onclick="refreshHistory()">↻ Refresh</button></div>
     <div class="card-body"><div id="histList"><div class="empty-msg">Loading…</div></div></div>
   </div>
-</div>
-</div>
   <!-- ROSTER -->
   <div class="card" id="rosterCard">
     <div class="card-hdr">
@@ -189,7 +187,8 @@ body{font-family:'Figtree',sans-serif;background:var(--bg);color:var(--text);min
       <div id="rosterList"><div class="empty-msg">Publish data first to populate roster.</div></div>
     </div>
   </div>
-
+</div>
+</div>
 
 <script>
 const raw={dev:null,rec:null,drv:null};
@@ -257,8 +256,11 @@ async function refreshLinks(){
   let data;try{data=JSON.parse(decodeURIComponent(escape(atob(existing.content.replace(/\n/g,'')))));}catch{list.innerHTML='<div class="empty-msg">Could not parse data.json.</div>';return;}
   const names=new Set();for(const md of Object.values(data.months||{}))Object.keys(md.techs).forEach(n=>names.add(n));
   if(!names.size){list.innerHTML='<div class="empty-msg">No technicians found.</div>';return;}
-  const sorted=[...names].sort();window._allLinks=sorted.map(n=>`${n}: ${siteUrl}/index.html?tech=${toSlug(n)}`).join('\n');
-  list.innerHTML=`<div class="links-list">${sorted.map(n=>{const url=`${siteUrl}/index.html?tech=${toSlug(n)}`;return`<div class="link-row"><div><div class="link-name">${n}</div><div class="link-url">${url}</div></div><button class="btn-copy" onclick="copyLink(this,'${url}')">Copy</button></div>`;}).join('')}</div><div style="margin-top:12px"><button class="btn-sm" onclick="copyAll()">📋 Copy All Links</button></div>`;
+  const roster=data.roster||{};const active=data.active||{};
+  const filtered=[...names].filter(n=>{if(active[n]===false)return false;const cls=roster[n]||'';if(cls&&!ELIGIBLE_CLASSES.includes(cls))return false;return true;}).sort();
+  if(!filtered.length){list.innerHTML='<div class="empty-msg">No eligible technicians found.</div>';return;}
+  window._allLinks=filtered.map(n=>`${n}: ${siteUrl}/index.html?tech=${toSlug(n)}`).join('\n');
+  list.innerHTML=`<div class="links-list">${filtered.map(n=>{const url=`${siteUrl}/index.html?tech=${toSlug(n)}`;return`<div class="link-row"><div><div class="link-name">${n}</div><div class="link-url">${url}</div></div><button class="btn-copy" onclick="copyLink(this,'${url}')">Copy</button></div>`;}).join('')}</div><div style="margin-top:12px"><button class="btn-sm" onclick="copyAll()">📋 Copy All Links</button></div>`;
 }
 function copyLink(btn,url){navigator.clipboard.writeText(url).then(()=>{btn.textContent='Copied!';btn.classList.add('copied');setTimeout(()=>{btn.textContent='Copy';btn.classList.remove('copied');},2000);});}
 function copyAll(){if(!window._allLinks)return;navigator.clipboard.writeText(window._allLinks).then(()=>alert('All links copied!'));}
@@ -273,11 +275,23 @@ async function refreshHistory(){
 }
 async function deleteMonth(month){
   if(!confirm(`Remove ${month}?`))return;const cfg=getCfg();const dataPath=cfg.path||'data.json';
-  const existing=await ghGet(dataPath);if(!existing)return;
+  if(!cfg.owner||!cfg.repo||!cfg.token){alert('Please fill in and save GitHub config first.');return;}
+  const existing=await ghGet(dataPath);if(!existing){alert('Could not fetch data.json from GitHub. Check your config.');return;}
   let data;try{data=JSON.parse(decodeURIComponent(escape(atob(existing.content.replace(/\n/g,'')))));}catch{alert('Parse error');return;}
   delete data.months[month];data.updatedAt=new Date().toISOString();
-  const res=await ghPut(dataPath,JSON.stringify(data,null,2),existing.sha);
-  if(res.ok){logLine(`Removed ${month}`,'ok');refreshHistory();refreshLinks();}else alert('GitHub update failed');
+  let res=await ghPut(dataPath,JSON.stringify(data,null,2),existing.sha);
+  if(!res.ok){
+    const errBody=await res.clone().json().catch(()=>({}));
+    if((errBody.message||'').includes('does not match')){
+      logLine('SHA changed — retrying delete…','warn');
+      const latest=await ghGet(dataPath);if(!latest){alert('Could not re-fetch data.json.');return;}
+      let latestData;try{latestData=JSON.parse(decodeURIComponent(escape(atob(latest.content.replace(/\n/g,'')))));}catch{alert('Parse error on retry');return;}
+      delete latestData.months[month];latestData.updatedAt=new Date().toISOString();
+      res=await ghPut(dataPath,JSON.stringify(latestData,null,2),latest.sha);
+    }
+  }
+  if(res.ok){logLine(`Removed ${month}`,'ok');refreshHistory();refreshLinks();}
+  else{const err=await res.json().catch(()=>({}));logLine(`✗ GitHub error: ${err.message||'Unknown error'}`,'err');alert(`GitHub error: ${err.message||'Unknown error'}. Check your token has write access.`);}
 }
 
 // ── ROSTER ───────────────────────────────────────────────────
