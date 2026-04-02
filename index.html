@@ -129,26 +129,9 @@ function yearScore(name,months){let t=0;for(const md of Object.values(months)){c
 
 
 // Quarterly payout tiers
-const Q_PAYOUT = {0: 0, 1: 0, 2: 200, 3: 300};
+// Quarterly payout: based on total goals hit (0-9)
+function qPayout(totalGoals){if(totalGoals>=9)return 300;if(totalGoals>=6)return 200;return 0;}
 
-function qPayout(passedMonths) {
-  return Q_PAYOUT[Math.min(passedMonths, 3)] || 0;
-}
-
-function qLabel(passedMonths, loaded) {
-  const payout = qPayout(passedMonths);
-  if (loaded < 3) {
-    // Quarter still in progress
-    if (passedMonths === 0 && loaded > 0) return { cls:'dead', txt:`$0 — No bonus possible`, chip:'qvc-dead', chipTxt:'$0', short:'vr' };
-    if (passedMonths === loaded) return { cls:'alive', txt:`${passedMonths}/${loaded} passed — still on track`, chip:'qvc-alive', chipTxt:'On Track', short:'vb' };
-    return { cls:'alive', txt:`${passedMonths}/${loaded} passed — quarter in progress`, chip:'qvc-alive', chipTxt:'In Progress', short:'vb' };
-  }
-  // Quarter complete (all 3 months loaded)
-  if (payout === 0)   return { cls:'dead',  txt:`0 months passed — no bonus`, chip:'qvc-dead',  chipTxt:'$0',   short:'vr' };
-  if (passedMonths === 2) return { cls:'partial', txt:`2/3 months — partial bonus earned`, chip:'qvc-partial', chipTxt:'$200', short:'vp' };
-  if (passedMonths === 3) return { cls:'bonus',  txt:`All 3 months passed — full bonus!`, chip:'qvc-bonus',  chipTxt:'$300', short:'vg' };
-  return { cls:'dead', txt:`No bonus`, chip:'qvc-dead', chipTxt:'$0', short:'vr' };
-}
 
 function filterEligible(data){
   const hasRoster=data.roster&&Object.keys(data.roster).length>0;
@@ -175,7 +158,11 @@ function qStatus(name,months){
   const qMons=QS[curQ].map(m=>`${m} ${ly}`);
   const results=qMons.map(mk=>months[mk]?.techs[name]?.monthPass??null);
   const loaded=results.filter(v=>v!==null);
-  return{curQ,ly,qMons,results,loaded,anyFail:results.some(v=>v===false),allPass:loaded.length===3&&loaded.every(Boolean)};
+  const totalGoals2=qMons.reduce((sum,mk)=>sum+(months[mk]?.techs[name]?.passCount||0),0);
+  const maxGoals2=loaded.length*3;
+  return{curQ,ly,qMons,results,loaded,totalGoals:totalGoals2,maxGoals:maxGoals2,
+    payout:loaded.length===3?qPayout(totalGoals2):null,
+    anyFail:results.some(v=>v===false),allPass:loaded.length===3&&loaded.every(Boolean)};
 }
 
 function initials(name){return name.split(' ').map(p=>p[0]).join('').slice(0,2).toUpperCase()}
@@ -224,6 +211,11 @@ function renderLeaderboard(data){
         <div>
           <div class="hb-title">2026 Year-to-Date<br>Leaderboard</div>
           <div class="hb-sub">${totalMonths} month${totalMonths!==1?'s':''} tracked · ${names.length} eligible techs</div>
+          <div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap">
+            <span style="font-size:11px;padding:3px 9px;border-radius:5px;background:rgba(255,255,255,.1);color:rgba(255,255,255,.6)">0–5 goals: $0</span>
+            <span style="font-size:11px;padding:3px 9px;border-radius:5px;background:rgba(251,176,64,.2);color:var(--gold)">6–8 goals: $200</span>
+            <span style="font-size:11px;padding:3px 9px;border-radius:5px;background:rgba(74,222,128,.15);color:#4ade80">9/9 goals: $300</span>
+          </div>
         </div>
         <div class="hb-stat">
           <div class="hb-stat-num">${topScore}</div>
@@ -416,9 +408,14 @@ function renderQGrid(lb){
   const grid=document.getElementById('qGrid');if(!grid)return;
   grid.innerHTML=lb.map(t=>{
     const q=t.qs;if(!q)return'';
-    const passedMos=q.loaded.filter(Boolean).length;
-    const ql=qLabel(passedMos,q.loaded.length);
-    const cardCls=ql.cls,vCls=ql.short,vTxt=ql.chipTxt;
+    const tg=q.totalGoals||0,mg=q.maxGoals||0,qd2=q.loaded.length===3;
+    let cardCls,vCls,vTxt;
+    if(qd2){
+      if(tg>=9){cardCls='bonus';vCls='vg';vTxt='$300';}
+      else if(tg>=6){cardCls='partial';vCls='vp';vTxt='$200';}
+      else{cardCls='dead';vCls='vr';vTxt='$0';}
+    } else if(mg>0){cardCls='alive';vCls='vb';vTxt=`${tg}/${mg}`;}
+    else{cardCls='pend';vCls='vy';vTxt='Pending';}
     const dots=q.qMons.map((mk,i)=>{
       const v=q.results[i],mo=mk.split(' ')[0];
       const cls=v===true?'pass':v===false?'fail':'none';
@@ -467,8 +464,9 @@ function renderLbList(lb){
           // Q bonus chip
           let qChip='';
           if(q){
-            const pay=qPayout(pm);
-            if(!q.quarterDone&&pm>0)qChip=`<div class="lb-bonus-chip" style="background:var(--blt);color:var(--blue);border-color:var(--bbd);margin-top:2px">Q:${pm}/3</div>`;
+            const qtg=q.totalGoals||0,qmg=q.maxGoals||0;
+            const pay=q.payout||0;
+            if(!q.quarterDone&&qmg>0)qChip=`<div class="lb-bonus-chip" style="background:var(--blt);color:var(--blue);border-color:var(--bbd);margin-top:2px">Q:${qtg}/${qmg}</div>`;
             else if(q.quarterDone&&pay>0)qChip=`<div class="lb-bonus-chip" style="${pay===200?'background:var(--alt);color:var(--golddk);border-color:var(--abd)':'background:var(--glt);color:var(--green);border-color:var(--gbd)'};margin-top:2px">Q $${pay}</div>`;
           }
           return yChip+qChip;
