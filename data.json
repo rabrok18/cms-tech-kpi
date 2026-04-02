@@ -87,18 +87,6 @@
           "passCount": 1,
           "monthPass": false
         },
-        "0f010ee5-1fc5-4986-badd-390f5ca62f12": {
-          "name": "0f010ee5-1fc5-4986-badd-390f5ca62f12",
-          "avgDev": 0,
-          "jobs": "Kevin Burke",
-          "rec": null,
-          "drv": null,
-          "devPass": true,
-          "recPass": null,
-          "drvPass": null,
-          "passCount": 1,
-          "monthPass": false
-        },
         "e37f54c3-db1d-4ce1-839a-a2326496dd2f": {
           "name": "e37f54c3-db1d-4ce1-839a-a2326496dd2f",
           "avgDev": 0,
@@ -246,7 +234,7 @@
       }
     }
   },
-  "updatedAt": "2026-04-02T14:16:35.224Z",
+  "updatedAt": "2026-04-02T14:28:44.680Z",
   "roster": {
     "Box Truck Truck 130": "Other / Not Participating",
     "Chad Tomaseck": "1st Year Apprentice",
