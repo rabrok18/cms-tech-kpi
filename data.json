@@ -290,9 +290,122 @@
           "monthPass": false
         }
       }
+    },
+    "Apr 2026": {
+      "month": "Apr 2026",
+      "techs": {
+        "Chad Tomaseck": {
+          "name": "Chad Tomaseck",
+          "avgDev": -0.05,
+          "jobs": 10,
+          "rec": 4,
+          "drv": null,
+          "devPass": true,
+          "recPass": false,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "Christopher Primamore": {
+          "name": "Christopher Primamore",
+          "avgDev": -0.3666666666666667,
+          "jobs": 6,
+          "rec": 9,
+          "drv": "Field",
+          "devPass": true,
+          "recPass": false,
+          "drvPass": false,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "Connor Miller": {
+          "name": "Connor Miller",
+          "avgDev": -0.44842105263157894,
+          "jobs": 19,
+          "rec": 22,
+          "drv": "Field",
+          "devPass": true,
+          "recPass": true,
+          "drvPass": false,
+          "passCount": 2,
+          "monthPass": true
+        },
+        "David Sztuba": {
+          "name": "David Sztuba",
+          "avgDev": -1.3404347826086955,
+          "jobs": 23,
+          "rec": 35,
+          "drv": "Field",
+          "devPass": true,
+          "recPass": true,
+          "drvPass": false,
+          "passCount": 2,
+          "monthPass": true
+        },
+        "Kevin Burke": {
+          "name": "Kevin Burke",
+          "avgDev": 0.25076923076923074,
+          "jobs": 13,
+          "rec": 36,
+          "drv": "Field",
+          "devPass": false,
+          "recPass": true,
+          "drvPass": false,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "Kevin David": {
+          "name": "Kevin David",
+          "avgDev": -0.25,
+          "jobs": 2,
+          "rec": 9,
+          "drv": null,
+          "devPass": true,
+          "recPass": false,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "Ray Dejesus": {
+          "name": "Ray Dejesus",
+          "avgDev": -2.413,
+          "jobs": 10,
+          "rec": 5,
+          "drv": "Field",
+          "devPass": true,
+          "recPass": false,
+          "drvPass": false,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "Robert Marsh": {
+          "name": "Robert Marsh",
+          "avgDev": 0.075,
+          "jobs": 2,
+          "rec": null,
+          "drv": "Field",
+          "devPass": false,
+          "recPass": null,
+          "drvPass": false,
+          "passCount": 0,
+          "monthPass": false
+        },
+        "Stephen Handrik": {
+          "name": "Stephen Handrik",
+          "avgDev": 0.6266666666666666,
+          "jobs": 6,
+          "rec": 4,
+          "drv": null,
+          "devPass": false,
+          "recPass": false,
+          "drvPass": null,
+          "passCount": 0,
+          "monthPass": false
+        }
+      }
     }
   },
-  "updatedAt": "2026-05-12T13:29:17.192Z",
+  "updatedAt": "2026-05-12T13:30:51.024Z",
   "roster": {
     "Chad Tomaseck": "1st Year Apprentice",
     "Christopher Primamore": "3rd Year Apprentice",
