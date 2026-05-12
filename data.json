@@ -330,18 +330,6 @@
           "passCount": 1,
           "monthPass": false
         },
-        "úzË¨\tbõfDô³RnUì\u0004=§}AV¾\u0010¨óõ,Êãhèãç\\\u0018Þ3¯£U«^à\u001c°Òze#\u001cVRÂÏ}Þ\u0012oÓñ\u001e¨ÛåÚ´Á\u001e\u001a\u0010¬°K.BÞ»ÆA¨\u0001Ëç\u00164\u0003": {
-          "name": "úzË¨\tbõfDô³RnUì\u0004=§}AV¾\u0010¨óõ,Êãhèãç\\\u0018Þ3¯£U«^à\u001c°Òze#\u001cVRÂÏ}Þ\u0012oÓñ\u001e¨ÛåÚ´Á\u001e\u001a\u0010¬°K.BÞ»ÆA¨\u0001Ëç\u00164\u0003",
-          "avgDev": 0,
-          "jobs": "¿{G â¸tr®ÈöyÈs)åÓäÎp~\u000eKãÞÙ££GËwãûdÇ¥êÜßë!û¦o\\Qûlt\u001f6Á3ÁÕ\u001bö\u0001l&ú{æ\u001e½?¥ó«ú>ÿ>ÿ<ÿ\u0003RMý",
-          "rec": null,
-          "drv": null,
-          "devPass": true,
-          "recPass": null,
-          "drvPass": null,
-          "passCount": 1,
-          "monthPass": false
-        },
         "È· SîÝ6\u000bØÔq/*èe\u0010ãpbs õZ\\ãîÝNANñºáePËÙµánÉìuÔªsd¿.­N±´Ú\\C.æ5ÏG\u0000Tä^¯f£Xª\u001bYê±¯÷äèMöÿü^NÏmNx.ñ~Bä°}¯Iì¶µU¬Mü½{£­J`\u000bÄC\u001d½ãô¡{Êî÷û\"9 î~÷,uù£¯üºÀªØ¿ÏÿËlö": {
           "name": "È· SîÝ6\u000bØÔq/*èe\u0010ãpbs õZ\\ãîÝNANñºáePËÙµánÉìuÔªsd¿.­N±´Ú\\C.æ5ÏG\u0000Tä^¯f£Xª\u001bYê±¯÷äèMöÿü^NÏmNx.ñ~Bä°}¯Iì¶µU¬Mü½{£­J`\u000bÄC\u001d½ãô¡{Êî÷û\"9 î~÷,uù£¯üºÀªØ¿ÏÿËlö",
           "avgDev": 0,
@@ -669,7 +657,7 @@
       }
     }
   },
-  "updatedAt": "2026-05-12T13:26:47.350Z",
+  "updatedAt": "2026-05-12T13:26:49.873Z",
   "roster": {
     "Chad Tomaseck": "1st Year Apprentice",
     "Christopher Primamore": "3rd Year Apprentice",
