@@ -290,9 +290,578 @@
           "monthPass": false
         }
       }
+    },
+    "Apr 2026": {
+      "month": "Apr 2026",
+      "techs": {
+        "'è\\\u0016\u000e \f-Ráþ\u0012jòÜìè³ãÂ)¼F\\\u000e´kp¦S­)j\u000e\u0010\bÞ¬«Sö\tN#ë¢ö#±``\u001fC(\u0001Û\u0016¿ÇKO6 ¿Ræ\u001c\u0019T8¤(\"Êªm\u0005\u0006Òy\u001d{\u000b\"âgÿJ`Kú^èÍ¬<¢d3«\u0018¾ÿ>±¿s\u0006:Ñ±¡:º\u0001Jñ": {
+          "name": "'è\\\u0016\u000e \f-Ráþ\u0012jòÜìè³ãÂ)¼F\\\u000e´kp¦S­)j\u000e\u0010\bÞ¬«Sö\tN#ë¢ö#±``\u001fC(\u0001Û\u0016¿ÇKO6 ¿Ræ\u001c\u0019T8¤(\"Êªm\u0005\u0006Òy\u001d{\u000b\"âgÿJ`Kú^èÍ¬<¢d3«\u0018¾ÿ>±¿s\u0006:Ñ±¡:º\u0001Jñ",
+          "avgDev": 0,
+          "jobs": "\u0014",
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "léRî}'x¶\u0004\u0014\u000bó\u000e³üù(": {
+          "name": "léRî}'x¶\u0004\u0014\u000bó\u000e³üù(",
+          "avgDev": 0,
+          "jobs": 0,
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "\u0001\u001fKõðÉ»âD÷": {
+          "name": "\u0001\u001fKõðÉ»âD÷",
+          "avgDev": 0,
+          "jobs": 0,
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "6ßpÄ»Ä=BÜõ\u0010«ÉYÜ´¡|\u0018'm\u000f{µâÃ-\fH\u000f³¿CÂ\u0000ñ\t¼\u0002\u0004}­(Äv\u0012@Ap\u0006\u001dÞ`§m|½!:ü(\u0018©\u0015¢g\f{Uá\u0016\u0014\u00172±x!\u0015î»ó\u0013*\u001cøPá\u0007!e8%ÂÆ\u0013a¯ZDØ\u0004\u001f!\u0011$µb\u001df¾:\u0005x#¼ÜÒÞ0\u000fîS,Ä\u0010ýX½\b9\u0018cPß{©-èoÂ?Îj\u0004%£^Q! &£^·Èè¼B¥õÑ*÷Ñ/s52ý{\tÆðI\u001eá¡_ë\u0002ÃÃó¯(\u0015õz\"\u0000j*ÚBÀBE3\u0004®%£¦¯ð£Á\u0019!#á\f2äÎoÙ\u0012Q¯GÉ(¢±\"£-0\u00122º ñ::jìt4Añ\u001b¡£ÃÊQBêõ0!E\\­\t)7|þ¦\u0005EsÀßK@Ô×i": {
+          "name": "6ßpÄ»Ä=BÜõ\u0010«ÉYÜ´¡|\u0018'm\u000f{µâÃ-\fH\u000f³¿CÂ\u0000ñ\t¼\u0002\u0004}­(Äv\u0012@Ap\u0006\u001dÞ`§m|½!:ü(\u0018©\u0015¢g\f{Uá\u0016\u0014\u00172±x!\u0015î»ó\u0013*\u001cøPá\u0007!e8%ÂÆ\u0013a¯ZDØ\u0004\u001f!\u0011$µb\u001df¾:\u0005x#¼ÜÒÞ0\u000fîS,Ä\u0010ýX½\b9\u0018cPß{©-èoÂ?Îj\u0004%£^Q! &£^·Èè¼B¥õÑ*÷Ñ/s52ý{\tÆðI\u001eá¡_ë\u0002ÃÃó¯(\u0015õz\"\u0000j*ÚBÀBE3\u0004®%£¦¯ð£Á\u0019!#á\f2äÎoÙ\u0012Q¯GÉ(¢±\"£-0\u00122º ñ::jìt4Añ\u001b¡£ÃÊQBêõ0!E\\­\t)7|þ¦\u0005EsÀßK@Ô×i",
+          "avgDev": 0,
+          "jobs": "\bÊ\u0018jº\"äù.àò!\u0005Ï2\u0005^ºÎ\u0007µ±ÍTßAÚ^W8ú²öÚöj9ÛÁPÜ¶(~\u001bÄõkØFµ4¶Àè\u0013ÔX¹\u001aÀ¶ì´Jòy\u0015\\j¨µ}\u001fM4ÔÎ·½\u0018áÇ]7ç\u0000Ö\u0015fm\u001d+W³ã&\b2",
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "J²¯Iö½¤\u0017í±ÙQ-|Å³Oì#ÍiÍ\u000eSmá\u000bªý@ä5²mm*¶-yÅ¶\"õ ]y\u0010vl": {
+          "name": "J²¯Iö½¤\u0017í±ÙQ-|Å³Oì#ÍiÍ\u000eSmá\u000bªý@ä5²mm*¶-yÅ¶\"õ ]y\u0010vl",
+          "avgDev": 0,
+          "jobs": "<ñ\u000e©9uû Ä«t°hä\u0010l¥UjK²7iá\u0006 éMÂt\u000f2rmV¼\u0001\u001e46\fHÆÏµC\u0000»1»\u0012ïN ù¬\u0011",
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "W½9Íee\u0014\u0019£L\u001a'µfÒYu^Ç¤ÂqR\u0012é\u0012³rV¶áÙ1w2\u000b´ÓÍîmÿDÉ¸ç¶üÙ'\u0011êÎFÆ\u0019\u001eä×_\u0017p\u00197Uæü¬3C\u001eO\u001c6Õ]ÕG\u001a\u000b\u001b\u001däÖØÅ[ÕCMµ\u001bOÇ]<Å\u0004­ÈD\u00050Ê«¥-y56Uðê² æÕ\u001e¢GÄ¥Ìz'I$2ë\u0010D+¦\u0006ÜÉ}®©ñM \u0015¹\u0018æqNK[Óé\u0016*À": {
+          "name": "W½9Íee\u0014\u0019£L\u001a'µfÒYu^Ç¤ÂqR\u0012é\u0012³rV¶áÙ1w2\u000b´ÓÍîmÿDÉ¸ç¶üÙ'\u0011êÎFÆ\u0019\u001eä×_\u0017p\u00197Uæü¬3C\u001eO\u001c6Õ]ÕG\u001a\u000b\u001b\u001däÖØÅ[ÕCMµ\u001bOÇ]<Å\u0004­ÈD\u00050Ê«¥-y56Uðê² æÕ\u001e¢GÄ¥Ìz'I$2ë\u0010D+¦\u0006ÜÉ}®©ñM \u0015¹\u0018æqNK[Óé\u0016*À",
+          "avgDev": 0,
+          "jobs": "ôíY0\u0001Þ\\9\u0014ÔþÄè¼Ñ¼¸Ü¼SØ\u000b°s9¾ô x þÕ±{üí\u0000`\u001büûÝÙ\u0001\u001eÅ°¦7\u0011\u0011v£4[Úf·0¬Ó\u0014Ä\u0017Z§õËZ¶NgÙv¾uZÙù@\u00116Z§«Âî\u0004Ò8æÃZÚS·¦ÐcD<WlNZ_©Õë½ë.åIÜ6ìÜËÝÓ©ËEÒ>·Q¦,ëDÖ%\b\u001e±Ujz×04",
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "ç½Ãó\u0011¾\u0006ùáå¾´D¼\u0014\u0010\u0002m¸I\u0018\u0015O\u000fíLJ+?1Í=f¢~6Õ­": {
+          "name": "ç½Ãó\u0011¾\u0006ùáå¾´D¼\u0014\u0010\u0002m¸I\u0018\u0015O\u000fíLJ+?1Í=f¢~6Õ­",
+          "avgDev": 0,
+          "jobs": 0,
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "kû=»¥Õ¢\b¦¾Bö9³o\u0017Ö\u000b9.\u0001Í\u001f\u0005æêå¦¿ã/OH¥kq#>ÈÞ¿IÀwæ] ¾åinà\u001b|7ÕÏ/ëWbü3,cÃgø¢k©": {
+          "name": "kû=»¥Õ¢\b¦¾Bö9³o\u0017Ö\u000b9.\u0001Í\u001f\u0005æêå¦¿ã/OH¥kq#>ÈÞ¿IÀwæ] ¾åinà\u001b|7ÕÏ/ëWbü3,cÃgø¢k©",
+          "avgDev": 0,
+          "jobs": 0,
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "úzË¨\tbõfDô³RnUì\u0004=§}AV¾\u0010¨óõ,Êãhèãç\\\u0018Þ3¯£U«^à\u001c°Òze#\u001cVRÂÏ}Þ\u0012oÓñ\u001e¨ÛåÚ´Á\u001e\u001a\u0010¬°K.BÞ»ÆA¨\u0001Ëç\u00164\u0003": {
+          "name": "úzË¨\tbõfDô³RnUì\u0004=§}AV¾\u0010¨óõ,Êãhèãç\\\u0018Þ3¯£U«^à\u001c°Òze#\u001cVRÂÏ}Þ\u0012oÓñ\u001e¨ÛåÚ´Á\u001e\u001a\u0010¬°K.BÞ»ÆA¨\u0001Ëç\u00164\u0003",
+          "avgDev": 0,
+          "jobs": "¿{G â¸tr®ÈöyÈs)åÓäÎp~\u000eKãÞÙ££GËwãûdÇ¥êÜßë!û¦o\\Qûlt\u001f6Á3ÁÕ\u001bö\u0001l&ú{æ\u001e½?¥ó«ú>ÿ>ÿ<ÿ\u0003RMý",
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "È· SîÝ6\u000bØÔq/*èe\u0010ãpbs õZ\\ãîÝNANñºáePËÙµánÉìuÔªsd¿.­N±´Ú\\C.æ5ÏG\u0000Tä^¯f£Xª\u001bYê±¯÷äèMöÿü^NÏmNx.ñ~Bä°}¯Iì¶µU¬Mü½{£­J`\u000bÄC\u001d½ãô¡{Êî÷û\"9 î~÷,uù£¯üºÀªØ¿ÏÿËlö": {
+          "name": "È· SîÝ6\u000bØÔq/*èe\u0010ãpbs õZ\\ãîÝNANñºáePËÙµánÉìuÔªsd¿.­N±´Ú\\C.æ5ÏG\u0000Tä^¯f£Xª\u001bYê±¯÷äèMöÿü^NÏmNx.ñ~Bä°}¯Iì¶µU¬Mü½{£­J`\u000bÄC\u001d½ãô¡{Êî÷û\"9 î~÷,uù£¯üºÀªØ¿ÏÿËlö",
+          "avgDev": 0,
+          "jobs": 0,
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "b¦ëævä¥ËNgjìt\u0011¥$:÷½ÑÎä&\u0011æj  \u0019ïPze,ñ Ïpã\u0003ku\"Þ>\u0014å·I¸Öå3¢l×±\u0017ÇoðxO WO¤þOÆe:+õÀ,y_ZA¡Ã,Y®bÙðgC\"Jø\u0019kÉÿ+¸.\"6 =â\u0000Æ\u0016°\u0017óHYY¥pß J\u0012xÆk«¤DäÝ\u000få8s\u000f¤Ó£\u0003å\u0006Ígü\u0019Þì)\u0012þ\u000e\u000fÝ0^Å«ùDô¶ðæÇ8\u0005­\t¥#LÁ»ÿí(ËM\u001e\u0013¦Ò": {
+          "name": "b¦ëævä¥ËNgjìt\u0011¥$:÷½ÑÎä&\u0011æj  \u0019ïPze,ñ Ïpã\u0003ku\"Þ>\u0014å·I¸Öå3¢l×±\u0017ÇoðxO WO¤þOÆe:+õÀ,y_ZA¡Ã,Y®bÙðgC\"Jø\u0019kÉÿ+¸.\"6 =â\u0000Æ\u0016°\u0017óHYY¥pß J\u0012xÆk«¤DäÝ\u000få8s\u000f¤Ó£\u0003å\u0006Ígü\u0019Þì)\u0012þ\u000e\u000fÝ0^Å«ùDô¶ðæÇ8\u0005­\t¥#LÁ»ÿí(ËM\u001e\u0013¦Ò",
+          "avgDev": 0,
+          "jobs": 0,
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "óbèMéÙYuçÉû>´27H3èwÑªð\u001bqõZPë\u000e«`*ß vø¢£ÑÓ¹¬%ù²cï`SÁíIåøFµØ&Ç\u001e¯OÚ4¿Ç?ÄÏL¸": {
+          "name": "óbèMéÙYuçÉû>´27H3èwÑªð\u001bqõZPë\u000e«`*ß vø¢£ÑÓ¹¬%ù²cï`SÁíIåøFµØ&Ç\u001e¯OÚ4¿Ç?ÄÏL¸",
+          "avgDev": 0,
+          "jobs": 0,
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "\u000f\u00026vO\u001eg±ÏT\u001cÞ¡¾ÔX³Å­ïLÞô\"±6ð\u0004V\u0018ÓÊÏË¥2zX{t©Îå~d\u0010r4â9þÅ&I¼°ëuöla\u0013»\u00177[~\u001e*\\ÂãR\u0018¼t\u0007:Iæõ\u000eõ\u0001 õ\u0006W]ÐÝ}µã{ñÆyJ«8e/|[zVßÆ\u0017ÃÍÿÞSeÌøüI/ú¥?wék": {
+          "name": "\u000f\u00026vO\u001eg±ÏT\u001cÞ¡¾ÔX³Å­ïLÞô\"±6ð\u0004V\u0018ÓÊÏË¥2zX{t©Îå~d\u0010r4â9þÅ&I¼°ëuöla\u0013»\u00177[~\u001e*\\ÂãR\u0018¼t\u0007:Iæõ\u000eõ\u0001 õ\u0006W]ÐÝ}µã{ñÆyJ«8e/|[zVßÆ\u0017ÃÍÿÞSeÌøüI/ú¥?wék",
+          "avgDev": 0,
+          "jobs": 0,
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "î©iÎÃ¨Ã(": {
+          "name": "î©iÎÃ¨Ã(",
+          "avgDev": 0,
+          "jobs": 0,
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "f_ÃÛ\u000e\tø\u0019\u001e¼ap½}Ûn\u0013\"Ö'": {
+          "name": "f_ÃÛ\u000e\tø\u0019\u001e¼ap½}Ûn\u0013\"Ö'",
+          "avgDev": 0,
+          "jobs": 0,
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "ûnxNmÅ´§QâF\u0018": {
+          "name": "ûnxNmÅ´§QâF\u0018",
+          "avgDev": 0,
+          "jobs": "\u0010¾8¡ÒA\u001d]D^¾Âh6j\u0013\u0019¬½Ôw8O¹pUõ4òfNmTeHðó^n±\u0001»ëËÏ@L\u000eË§\u0019¹ßá",
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "3³ÁÒow÷5ÁRw_'Üä-<Å}êÚÍ)§ÁÂÊá³:\u001b\u0012¬à8uÃ\têeE b`ÉêDâS¾¦?ÅÄ/>p4\u0019¥&.ïZe\u0013ò\u0017": {
+          "name": "3³ÁÒow÷5ÁRw_'Üä-<Å}êÚÍ)§ÁÂÊá³:\u001b\u0012¬à8uÃ\têeE b`ÉêDâS¾¦?ÅÄ/>p4\u0019¥&.ïZe\u0013ò\u0017",
+          "avgDev": 0,
+          "jobs": 0,
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "\u0010ºïÈî²g\u001f\u0010ò\u0011vµV+~e/Ïº«RoDöl\"t¤×Ð\u0019~®Âw÷1õ": {
+          "name": "\u0010ºïÈî²g\u001f\u0010ò\u0011vµV+~e/Ïº«RoDöl\"t¤×Ð\u0019~®Âw÷1õ",
+          "avgDev": 0,
+          "jobs": "¾CðåÁWNZóÎo÷'0åÉÎY\bÏ\u0006\u0018\"¢]\u0002·Í©J/Øõ²6>\u0006\u000bË{Ö­9¢Õ§2J\u0011¨xVÊ\u001dÝîÄ-v9=ë¤E\u0011Âk1Âþ9}¯ÿ®¯?\u001c'KZ",
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "tA_Ù\u0015\fÁÕ\u001aFÂ": {
+          "name": "tA_Ù\u0015\fÁÕ\u001aFÂ",
+          "avgDev": 0,
+          "jobs": "bq\u0005\u000e![¿\"ªzyÍW]#·\u000e\tUj¹\u001c¦àú'tw4Tvdr)L®È\u000eÓROYÏèY\u0010¦³>",
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "+°": {
+          "name": "+°",
+          "avgDev": 0,
+          "jobs": "1LÃëÞö©\u0012\u0007IoÖÆ\u001cëhË±íÚÔ«BåÁÐ¶ºØÝÕ¤eD(Áã/÷",
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "]sâ®ªEi\u0018D6añÈ¿\u0012yË¡¨ãY¸ctz\u00169Úd\u001c\u0001ß'\u000fpô·PÿÑ*\u001fà-}\u001f\u001b`-\u001bÇ´_èæÓàMHt}JûåÆ°·ÍôC6&LzI<tUÅ°U Ø\u0013Tvªß\b\u001fsÝâïG\u0014¯gR\\ÓàWi|\u0006N\taeò$T[T\u0011Õ\u0013ªÇÁ¤\u0007Öp\u000fK\u0012¬r?¦Îu\\¡àó\u001a½áo\u001b[úS@QÇ¤¦¼Ònô\u0002Bå3¦+\tïà^\u0010ß[Bì§Ëý\u0016>ÇbYÄ4g¦F¼d\u0013q\u001cN ^_LÅ": {
+          "name": "]sâ®ªEi\u0018D6añÈ¿\u0012yË¡¨ãY¸ctz\u00169Úd\u001c\u0001ß'\u000fpô·PÿÑ*\u001fà-}\u001f\u001b`-\u001bÇ´_èæÓàMHt}JûåÆ°·ÍôC6&LzI<tUÅ°U Ø\u0013Tvªß\b\u001fsÝâïG\u0014¯gR\\ÓàWi|\u0006N\taeò$T[T\u0011Õ\u0013ªÇÁ¤\u0007Öp\u000fK\u0012¬r?¦Îu\\¡àó\u001a½áo\u001b[úS@QÇ¤¦¼Ònô\u0002Bå3¦+\tïà^\u0010ß[Bì§Ëý\u0016>ÇbYÄ4g¦F¼d\u0013q\u001cN ^_LÅ",
+          "avgDev": 0,
+          "jobs": ">ª\u001e^\u0017ÖqBå\u000f¨n`#Xº\u00177åÅÑO¡\u0005F8§ëûü?Wl\u0006üy\u0002\u0018s»!1aQõ¨¥M9\fY",
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "\u0011X{sê\u001duæP¼NW«ÜU²": {
+          "name": "\u0011X{sê\u001duæP¼NW«ÜU²",
+          "avgDev": 0,
+          "jobs": 0,
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "!ðÏÎãG\u000b@àFv)üà.âîõÚpð¬$uûïL}°§b\u0005ÅÜV¥|ÿqÿúá}?ß¿\u0000È<` ": {
+          "name": "!ðÏÎãG\u000b@àFv)üà.âîõÚpð¬$uûïL}°§b\u0005ÅÜV¥|ÿqÿúá}?ß¿\u0000È<` ",
+          "avgDev": 0,
+          "jobs": 0,
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "çyå#S£¹ÑI\u0017°\u0016= D\u001aºaØ²á]Ën-`qÈNézx]@>\u0015%Ô\u0017ÆD-Pa4æÖ\u001f-Üà1ÜaÑß¤ùÁÿ\\í8rº\u0001s": {
+          "name": "çyå#S£¹ÑI\u0017°\u0016= D\u001aºaØ²á]Ën-`qÈNézx]@>\u0015%Ô\u0017ÆD-Pa4æÖ\u001f-Üà1ÜaÑß¤ùÁÿ\\í8rº\u0001s",
+          "avgDev": 0,
+          "jobs": "Zjë\u0012ÔÚ<kòã±$&+Þ=-ÁyÏ||å\u0004!",
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "¯{LðàÕçÉ¯\u0016»]±\u001dáÕ?!\u0018l»\u0015\u0011ÔöÔ~Í§G\t\u001c)L¸ç j&<¾²´oÊ0G\u0012*\u001eËßþ\\\u0006A¯/-þÁÁgá¸P\u0000\u001f£,\u0003§B×°|7Õ?¶ÙçùßãÇ\u00068_\u0012ýýxeÂßáà|í0féAxì%R°\u0018[E¿Î½D\u0014)¥\u0005R\u001c§0%Î7ÓpÖWÅõcå6\u0014Tá«½{\u00177V÷wÐoO_AW=à": {
+          "name": "¯{LðàÕçÉ¯\u0016»]±\u001dáÕ?!\u0018l»\u0015\u0011ÔöÔ~Í§G\t\u001c)L¸ç j&<¾²´oÊ0G\u0012*\u001eËßþ\\\u0006A¯/-þÁÁgá¸P\u0000\u001f£,\u0003§B×°|7Õ?¶ÙçùßãÇ\u00068_\u0012ýýxeÂßáà|í0féAxì%R°\u0018[E¿Î½D\u0014)¥\u0005R\u001c§0%Î7ÓpÖWÅõcå6\u0014Tá«½{\u00177V÷wÐoO_AW=à",
+          "avgDev": 0,
+          "jobs": 0,
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "îAU\tUë.àAÅ\fµ)n\u0016ï\u0018ìæ»}Ô»uw_ãÝ\"è§Ë«\u0003 h{\tCq\"±¾\u0007åz]®ðÄ>äûÑß+9Í>á\f": {
+          "name": "îAU\tUë.àAÅ\fµ)n\u0016ï\u0018ìæ»}Ô»uw_ãÝ\"è§Ë«\u0003 h{\tCq\"±¾\u0007åz]®ðÄ>äûÑß+9Í>á\f",
+          "avgDev": 0,
+          "jobs": "Ã Ô¨VíPd(\f¯«LÑs¤`HA¥¢Ä\\XÊ4Þlõn@MÞÓTðº\u0015\u0002I åÜhÑoÞU8Dù\u0003sß\u000fsH¢qDÃ\u0004s¦¡\u0012Õ(4^NâÓniº\u0012dÒf'ºÏo¡°zÀ*£ó",
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "VçÛ¢Ð$Y µÔ¤ã}u1ªHÛ\u0014©J\u0003í´ïdÔ¡Æda4Z\u001eb÷Å%5ïVÙq\u0005S+\u0004¬RÇ\b>Âû>÷UÁ\u0018\u001bi*!åÜôû*7¬=°^Ø5/\u0019ú\u0006³r\u0004Óy^J8=WQ=Oï«8^Kù`ÍnÌæèµ ¹P@fcm³¬cûÊ\u0019g{ñPrL*eH": {
+          "name": "VçÛ¢Ð$Y µÔ¤ã}u1ªHÛ\u0014©J\u0003í´ïdÔ¡Æda4Z\u001eb÷Å%5ïVÙq\u0005S+\u0004¬RÇ\b>Âû>÷UÁ\u0018\u001bi*!åÜôû*7¬=°^Ø5/\u0019ú\u0006³r\u0004Óy^J8=WQ=Oï«8^Kù`ÍnÌæèµ ¹P@fcm³¬cûÊ\u0019g{ñPrL*eH",
+          "avgDev": 0,
+          "jobs": 0,
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "\f]=:þ\u0018øÿ¼>": {
+          "name": "\f]=:þ\u0018øÿ¼>",
+          "avgDev": 0,
+          "jobs": "ð÷õ/ý@?'",
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "HtUÝ#\t+tÌj¡+p9Ym*J@/kPÆÞl:\u001f!\u0001\u0012d»ÊpªöÂo¨GwW_¸U*?à\u0015æÿÁ\u0011Bí«Ó«û³o¸Òßa\u0002ü0ó": {
+          "name": "HtUÝ#\t+tÌj¡+p9Ym*J@/kPÆÞl:\u001f!\u0001\u0012d»ÊpªöÂo¨GwW_¸U*?à\u0015æÿÁ\u0011Bí«Ó«û³o¸Òßa\u0002ü0ó",
+          "avgDev": 0,
+          "jobs": "J{Â",
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "ª¯¼)Ôä¦S\b«:T%Ýt,\u000fæÍ½\u0010Q\u001a\u0014ÜÔ¸÷\u0013¥p~ÇÇJiÈS÷\u0006\u00192·Þq$Lªr\u001cì{úîÝ01:VéÀrZ..\u0019ª\bX³Ìf\u0016`4ªRpí5oÕ\u0003mÑØ\u001dd l\u00177­{Ê¹\u000bã»\u0019#e^:Æ.µf\u000eÉL£¬BÞ&Í": {
+          "name": "ª¯¼)Ôä¦S\b«:T%Ýt,\u000fæÍ½\u0010Q\u001a\u0014ÜÔ¸÷\u0013¥p~ÇÇJiÈS÷\u0006\u00192·Þq$Lªr\u001cì{úîÝ01:VéÀrZ..\u0019ª\bX³Ìf\u0016`4ªRpí5oÕ\u0003mÑØ\u001dd l\u00177­{Ê¹\u000bã»\u0019#e^:Æ.µf\u000eÉL£¬BÞ&Í",
+          "avgDev": 0,
+          "jobs": 0,
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "¸Ma_*\u000e\u0018Éd\u0014BîÛ\u000fc:|Üsý^¿Ö\u0017T`": {
+          "name": "¸Ma_*\u000e\u0018Éd\u0014BîÛ\u000fc:|Üsý^¿Ö\u0017T`",
+          "avgDev": 0,
+          "jobs": 0,
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "¯jcr¥ÃÏ¥\u0016(¶I\u0019®¶RQ7,1Å0/\u0005cAg¾\u0003³x¡2g\u0014¸¹\u001a#\u0012\u0004×ÿ7g iãTü": {
+          "name": "¯jcr¥ÃÏ¥\u0016(¶I\u0019®¶RQ7,1Å0/\u0005cAg¾\u0003³x¡2g\u0014¸¹\u001a#\u0012\u0004×ÿ7g iãTü",
+          "avgDev": 0,
+          "jobs": 0,
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "Áw<¸#8rÉe\u001aÌ²B\u0005®|Y\tÎEaOû³wøsD9}]Û\u0010Ý'æMaÌæ5B\u0012\u0015]L¾åÞëoz¿·ò\u0014¤£Xï\u000e\\\u001bæ¥Lì@ù¶óÎaÓà)ý:¨\"P-_½míþ°g\u0015UÑ¹°¤¯+Ñ©oPZ°{|ßµQã\u0007id": {
+          "name": "Áw<¸#8rÉe\u001aÌ²B\u0005®|Y\tÎEaOû³wøsD9}]Û\u0010Ý'æMaÌæ5B\u0012\u0015]L¾åÞëoz¿·ò\u0014¤£Xï\u000e\\\u001bæ¥Lì@ù¶óÎaÓà)ý:¨\"P-_½míþ°g\u0015UÑ¹°¤¯+Ñ©oPZ°{|ßµQã\u0007id",
+          "avgDev": 0,
+          "jobs": 0,
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "Õ}pDã\u0007Z\u0016": {
+          "name": "Õ}pDã\u0007Z\u0016",
+          "avgDev": 0,
+          "jobs": "Ùk=¿Õ#",
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "*Ãp>`&%d\u0007ïÅ\u0016â\u0001E": {
+          "name": "*Ãp>`&%d\u0007ïÅ\u0016â\u0001E",
+          "avgDev": 0,
+          "jobs": "È\u000fÏ\"°+¿7Gúô\u0005`\u001eË]=",
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "¨)?ò-Ý`@5": {
+          "name": "¨)?ò-Ý`@5",
+          "avgDev": 0,
+          "jobs": 0,
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "µLÐa": {
+          "name": "µLÐa",
+          "avgDev": 0,
+          "jobs": "Ýªî¯ãksEªóÝ´\u0016×Kò½\bx\täM#úw÷¼+Q~÷\u001exV\bäYö\u000bàçëÎµ\u0000^^\u0012Eäý¼<Gnv.\u0005ðË½ç%Í¹¿\u0018'ÆT\u001e_«÷dB.ÙÆµ¡GºÎº¨ë\u0017j»yÈ",
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "O³Îó3Ýíû×þ\u0000ñ©.": {
+          "name": "O³Îó3Ýíû×þ\u0000ñ©.",
+          "avgDev": 0,
+          "jobs": 0,
+          "rec": null,
+          "drv": null,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "Kevin Burke": {
+          "name": "Kevin Burke",
+          "avgDev": null,
+          "jobs": 0,
+          "rec": 36,
+          "drv": "Field",
+          "devPass": null,
+          "recPass": true,
+          "drvPass": false,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "David Sztuba": {
+          "name": "David Sztuba",
+          "avgDev": null,
+          "jobs": 0,
+          "rec": 35,
+          "drv": "Field",
+          "devPass": null,
+          "recPass": true,
+          "drvPass": false,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "Connor Miller": {
+          "name": "Connor Miller",
+          "avgDev": null,
+          "jobs": 0,
+          "rec": 22,
+          "drv": "Field",
+          "devPass": null,
+          "recPass": true,
+          "drvPass": false,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "Kevin David": {
+          "name": "Kevin David",
+          "avgDev": null,
+          "jobs": 0,
+          "rec": 9,
+          "drv": null,
+          "devPass": null,
+          "recPass": false,
+          "drvPass": null,
+          "passCount": 0,
+          "monthPass": false
+        },
+        "Christopher Primamore": {
+          "name": "Christopher Primamore",
+          "avgDev": null,
+          "jobs": 0,
+          "rec": 9,
+          "drv": "Field",
+          "devPass": null,
+          "recPass": false,
+          "drvPass": false,
+          "passCount": 0,
+          "monthPass": false
+        },
+        "Ray Dejesus": {
+          "name": "Ray Dejesus",
+          "avgDev": null,
+          "jobs": 0,
+          "rec": 5,
+          "drv": "Field",
+          "devPass": null,
+          "recPass": false,
+          "drvPass": false,
+          "passCount": 0,
+          "monthPass": false
+        },
+        "Stephen Handrik": {
+          "name": "Stephen Handrik",
+          "avgDev": null,
+          "jobs": 0,
+          "rec": 4,
+          "drv": null,
+          "devPass": null,
+          "recPass": false,
+          "drvPass": null,
+          "passCount": 0,
+          "monthPass": false
+        },
+        "Chad Tomaseck": {
+          "name": "Chad Tomaseck",
+          "avgDev": null,
+          "jobs": 0,
+          "rec": 4,
+          "drv": null,
+          "devPass": null,
+          "recPass": false,
+          "drvPass": null,
+          "passCount": 0,
+          "monthPass": false
+        },
+        "Robert Marsh": {
+          "name": "Robert Marsh",
+          "avgDev": null,
+          "jobs": 0,
+          "rec": null,
+          "drv": "Field",
+          "devPass": null,
+          "recPass": null,
+          "drvPass": false,
+          "passCount": 0,
+          "monthPass": false
+        }
+      }
     }
   },
-  "updatedAt": "2026-05-12T13:22:33.908Z",
+  "updatedAt": "2026-05-12T13:24:12.046Z",
   "roster": {
     "Chad Tomaseck": "1st Year Apprentice",
     "Christopher Primamore": "3rd Year Apprentice",
