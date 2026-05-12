@@ -354,18 +354,6 @@
           "passCount": 1,
           "monthPass": false
         },
-        "î©iÎÃ¨Ã(": {
-          "name": "î©iÎÃ¨Ã(",
-          "avgDev": 0,
-          "jobs": 0,
-          "rec": null,
-          "drv": null,
-          "devPass": true,
-          "recPass": null,
-          "drvPass": null,
-          "passCount": 1,
-          "monthPass": false
-        },
         "f_ÃÛ\u000e\tø\u0019\u001e¼ap½}Ûn\u0013\"Ö'": {
           "name": "f_ÃÛ\u000e\tø\u0019\u001e¼ap½}Ûn\u0013\"Ö'",
           "avgDev": 0,
@@ -645,7 +633,7 @@
       }
     }
   },
-  "updatedAt": "2026-05-12T13:26:56.193Z",
+  "updatedAt": "2026-05-12T13:26:59.570Z",
   "roster": {
     "Chad Tomaseck": "1st Year Apprentice",
     "Christopher Primamore": "3rd Year Apprentice",
