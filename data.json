@@ -503,18 +503,6 @@
           "passCount": 1,
           "monthPass": false
         },
-        "Box Truck Truck 130": {
-          "name": "Box Truck Truck 130",
-          "avgDev": null,
-          "jobs": 0,
-          "rec": null,
-          "drv": 91,
-          "devPass": null,
-          "recPass": null,
-          "drvPass": true,
-          "passCount": 1,
-          "monthPass": false
-        },
         "2300764429 .": {
           "name": "2300764429 .",
           "avgDev": null,
@@ -566,7 +554,7 @@
       }
     }
   },
-  "updatedAt": "2026-06-02T13:31:00.013Z",
+  "updatedAt": "2026-06-02T13:33:18.917Z",
   "roster": {
     "Chad Tomaseck": "1st Year Apprentice",
     "Christopher Primamore": "3rd Year Apprentice",
