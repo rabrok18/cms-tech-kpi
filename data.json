@@ -514,23 +514,11 @@
           "drvPass": true,
           "passCount": 1,
           "monthPass": false
-        },
-        "1051001427 .": {
-          "name": "1051001427 .",
-          "avgDev": null,
-          "jobs": 0,
-          "rec": null,
-          "drv": 72,
-          "devPass": null,
-          "recPass": null,
-          "drvPass": false,
-          "passCount": 0,
-          "monthPass": false
         }
       }
     }
   },
-  "updatedAt": "2026-06-02T13:34:08.434Z",
+  "updatedAt": "2026-06-02T13:34:42.029Z",
   "roster": {
     "Chad Tomaseck": "1st Year Apprentice",
     "Christopher Primamore": "3rd Year Apprentice",
