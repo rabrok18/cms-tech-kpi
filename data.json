@@ -554,18 +554,24 @@
       }
     }
   },
-  "updatedAt": "2026-06-11T15:41:32.196Z",
+  "updatedAt": "2026-06-11T15:44:15.135Z",
   "roster": {
+    "2300764429 .": "Other / Not Participating",
+    "Box Truck Truck 130": "Other / Not Participating",
     "Chad Tomaseck": "1st Year Apprentice",
     "Christopher Primamore": "3rd Year Apprentice",
     "Connor Miller": "5th Year Apprentice",
     "David Sztuba": "4th Year Apprentice",
     "Kevin Burke": "Journeyman",
+    "Kevin David": "Other / Not Participating",
     "Ray Dejesus": "Journeyman",
     "Robert Marsh": "Journeyman",
-    "Stephen Handrik": "Journeyman"
+    "Stephen Handrik": "Journeyman",
+    "Thomas Mulligan": "Other / Not Participating"
   },
   "active": {
+    "2300764429 .": false,
+    "Box Truck Truck 130": false,
     "Chad Tomaseck": true,
     "Christopher Primamore": true,
     "Connor Miller": true,
@@ -574,6 +580,7 @@
     "Kevin David": false,
     "Ray Dejesus": true,
     "Robert Marsh": false,
-    "Stephen Handrik": true
+    "Stephen Handrik": true,
+    "Thomas Mulligan": false
   }
 }
