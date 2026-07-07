@@ -552,9 +552,158 @@
           "monthPass": false
         }
       }
+    },
+    "Jun 2026": {
+      "month": "Jun 2026",
+      "techs": {
+        "Chad Tomaseck": {
+          "name": "Chad Tomaseck",
+          "avgDev": -0.36,
+          "jobs": 1,
+          "rec": null,
+          "drv": 67,
+          "devPass": true,
+          "recPass": null,
+          "drvPass": false,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "Christopher Primamore": {
+          "name": "Christopher Primamore",
+          "avgDev": -0.69,
+          "jobs": 1,
+          "rec": 12,
+          "drv": 77,
+          "devPass": true,
+          "recPass": false,
+          "drvPass": true,
+          "passCount": 2,
+          "monthPass": true
+        },
+        "Connor Miller": {
+          "name": "Connor Miller",
+          "avgDev": -1.6190000000000002,
+          "jobs": 20,
+          "rec": 17,
+          "drv": 83,
+          "devPass": true,
+          "recPass": false,
+          "drvPass": true,
+          "passCount": 2,
+          "monthPass": true
+        },
+        "David Sztuba": {
+          "name": "David Sztuba",
+          "avgDev": -0.958125,
+          "jobs": 16,
+          "rec": 30,
+          "drv": 82,
+          "devPass": true,
+          "recPass": true,
+          "drvPass": true,
+          "passCount": 3,
+          "monthPass": true
+        },
+        "Kevin Burke": {
+          "name": "Kevin Burke",
+          "avgDev": -0.10411764705882354,
+          "jobs": 17,
+          "rec": 10,
+          "drv": 75,
+          "devPass": true,
+          "recPass": false,
+          "drvPass": true,
+          "passCount": 2,
+          "monthPass": true
+        },
+        "Ray Dejesus": {
+          "name": "Ray Dejesus",
+          "avgDev": -1.6875,
+          "jobs": 8,
+          "rec": 11,
+          "drv": 82,
+          "devPass": true,
+          "recPass": false,
+          "drvPass": true,
+          "passCount": 2,
+          "monthPass": true
+        },
+        "Stephen Handrik": {
+          "name": "Stephen Handrik",
+          "avgDev": 0.5066666666666667,
+          "jobs": 3,
+          "rec": null,
+          "drv": 79,
+          "devPass": false,
+          "recPass": null,
+          "drvPass": true,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "Box Truck 130": {
+          "name": "Box Truck 130",
+          "avgDev": null,
+          "jobs": 0,
+          "rec": null,
+          "drv": 92,
+          "devPass": null,
+          "recPass": null,
+          "drvPass": true,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "Daniel O'Keefe": {
+          "name": "Daniel O'Keefe",
+          "avgDev": null,
+          "jobs": 0,
+          "rec": null,
+          "drv": 82,
+          "devPass": null,
+          "recPass": null,
+          "drvPass": true,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "2300764429 .": {
+          "name": "2300764429 .",
+          "avgDev": null,
+          "jobs": 0,
+          "rec": null,
+          "drv": 82,
+          "devPass": null,
+          "recPass": null,
+          "drvPass": true,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "Rashan Dennis": {
+          "name": "Rashan Dennis",
+          "avgDev": null,
+          "jobs": 0,
+          "rec": null,
+          "drv": 70,
+          "devPass": null,
+          "recPass": null,
+          "drvPass": false,
+          "passCount": 0,
+          "monthPass": false
+        },
+        "Thomas Mulligan": {
+          "name": "Thomas Mulligan",
+          "avgDev": null,
+          "jobs": 0,
+          "rec": null,
+          "drv": 68,
+          "devPass": null,
+          "recPass": null,
+          "drvPass": false,
+          "passCount": 0,
+          "monthPass": false
+        }
+      }
     }
   },
-  "updatedAt": "2026-06-11T15:44:15.135Z",
+  "updatedAt": "2026-07-07T15:21:29.758Z",
   "roster": {
     "2300764429 .": "Other / Not Participating",
     "Box Truck Truck 130": "Other / Not Participating",
