@@ -679,18 +679,19 @@
       }
     }
   },
-  "updatedAt": "2026-07-07T15:25:20.969Z",
+  "updatedAt": "2026-07-07T20:21:36.506Z",
   "roster": {
     "2300764429 .": "Other / Not Participating",
     "Chad Tomaseck": "1st Year Apprentice",
     "Christopher Primamore": "3rd Year Apprentice",
     "Connor Miller": "5th Year Apprentice",
+    "Daniel O'Keefe": "5th Year Apprentice",
     "David Sztuba": "4th Year Apprentice",
     "Kevin Burke": "Journeyman",
     "Kevin David": "Other / Not Participating",
     "Ray Dejesus": "Journeyman",
     "Robert Marsh": "Journeyman",
-    "Stephen Handrik": "Journeyman",
+    "Stephen Handrik": "Other / Not Participating",
     "Thomas Mulligan": "Other / Not Participating"
   },
   "active": {
@@ -698,12 +699,14 @@
     "Chad Tomaseck": true,
     "Christopher Primamore": true,
     "Connor Miller": true,
+    "Daniel O'Keefe": true,
     "David Sztuba": true,
     "Kevin Burke": true,
     "Kevin David": false,
+    "Rashan Dennis": true,
     "Ray Dejesus": true,
     "Robert Marsh": false,
-    "Stephen Handrik": true,
+    "Stephen Handrik": false,
     "Thomas Mulligan": false
   }
 }
