@@ -628,18 +628,6 @@
           "passCount": 1,
           "monthPass": false
         },
-        "Box Truck 130": {
-          "name": "Box Truck 130",
-          "avgDev": null,
-          "jobs": 0,
-          "rec": null,
-          "drv": 92,
-          "devPass": null,
-          "recPass": null,
-          "drvPass": true,
-          "passCount": 1,
-          "monthPass": false
-        },
         "Daniel O'Keefe": {
           "name": "Daniel O'Keefe",
           "avgDev": null,
@@ -691,7 +679,7 @@
       }
     }
   },
-  "updatedAt": "2026-07-07T15:25:15.150Z",
+  "updatedAt": "2026-07-07T15:25:20.969Z",
   "roster": {
     "2300764429 .": "Other / Not Participating",
     "Chad Tomaseck": "1st Year Apprentice",
