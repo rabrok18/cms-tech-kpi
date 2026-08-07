@@ -677,9 +677,182 @@
           "monthPass": false
         }
       }
+    },
+    "Jul 2026": {
+      "month": "Jul 2026",
+      "techs": {
+        "Chad Tomaseck": {
+          "name": "Chad Tomaseck",
+          "avgDev": 0.055,
+          "jobs": 4,
+          "rec": null,
+          "drv": 67,
+          "devPass": false,
+          "recPass": null,
+          "drvPass": false,
+          "passCount": 0,
+          "monthPass": false
+        },
+        "Christopher Primamore": {
+          "name": "Christopher Primamore",
+          "avgDev": -1.163,
+          "jobs": 10,
+          "rec": 10,
+          "drv": 73,
+          "devPass": true,
+          "recPass": false,
+          "drvPass": false,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "Connor Miller": {
+          "name": "Connor Miller",
+          "avgDev": -0.7305882352941176,
+          "jobs": 17,
+          "rec": 26,
+          "drv": 85,
+          "devPass": true,
+          "recPass": true,
+          "drvPass": true,
+          "passCount": 3,
+          "monthPass": true
+        },
+        "Daniel O'Keefe": {
+          "name": "Daniel O'Keefe",
+          "avgDev": -1.6210526315789473,
+          "jobs": 19,
+          "rec": 14,
+          "drv": null,
+          "devPass": true,
+          "recPass": false,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "David Sztuba": {
+          "name": "David Sztuba",
+          "avgDev": -1.3234375,
+          "jobs": 32,
+          "rec": 23,
+          "drv": 81,
+          "devPass": true,
+          "recPass": true,
+          "drvPass": true,
+          "passCount": 3,
+          "monthPass": true
+        },
+        "Kevin Burke": {
+          "name": "Kevin Burke",
+          "avgDev": -1.4914634146341463,
+          "jobs": 41,
+          "rec": 30,
+          "drv": 74,
+          "devPass": true,
+          "recPass": true,
+          "drvPass": false,
+          "passCount": 2,
+          "monthPass": true
+        },
+        "Rashan Dennis": {
+          "name": "Rashan Dennis",
+          "avgDev": -0.16357142857142856,
+          "jobs": 14,
+          "rec": 9,
+          "drv": 67,
+          "devPass": true,
+          "recPass": false,
+          "drvPass": false,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "Ray Dejesus": {
+          "name": "Ray Dejesus",
+          "avgDev": 4.845,
+          "jobs": 6,
+          "rec": 1,
+          "drv": 84,
+          "devPass": false,
+          "recPass": false,
+          "drvPass": true,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "Stephen Handrik": {
+          "name": "Stephen Handrik",
+          "avgDev": 0.8183333333333334,
+          "jobs": 6,
+          "rec": 4,
+          "drv": 71,
+          "devPass": false,
+          "recPass": false,
+          "drvPass": false,
+          "passCount": 0,
+          "monthPass": false
+        },
+        "Thomas Mulligan": {
+          "name": "Thomas Mulligan",
+          "avgDev": -0.31,
+          "jobs": 1,
+          "rec": 0,
+          "drv": 82,
+          "devPass": true,
+          "recPass": false,
+          "drvPass": true,
+          "passCount": 2,
+          "monthPass": true
+        },
+        "Dennis Arana": {
+          "name": "Dennis Arana",
+          "avgDev": null,
+          "jobs": 0,
+          "rec": 0,
+          "drv": null,
+          "devPass": null,
+          "recPass": false,
+          "drvPass": null,
+          "passCount": 0,
+          "monthPass": false
+        },
+        "Box Truck": {
+          "name": "Box Truck",
+          "avgDev": null,
+          "jobs": 0,
+          "rec": null,
+          "drv": 90,
+          "devPass": null,
+          "recPass": null,
+          "drvPass": true,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "2300764429 .": {
+          "name": "2300764429 .",
+          "avgDev": null,
+          "jobs": 0,
+          "rec": null,
+          "drv": 90,
+          "devPass": null,
+          "recPass": null,
+          "drvPass": true,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "Daniel OKeefe": {
+          "name": "Daniel OKeefe",
+          "avgDev": null,
+          "jobs": 0,
+          "rec": null,
+          "drv": 81,
+          "devPass": null,
+          "recPass": null,
+          "drvPass": true,
+          "passCount": 1,
+          "monthPass": false
+        }
+      }
     }
   },
-  "updatedAt": "2026-07-07T20:21:36.506Z",
+  "updatedAt": "2026-08-07T20:57:02.595Z",
   "roster": {
     "2300764429 .": "Other / Not Participating",
     "Chad Tomaseck": "1st Year Apprentice",
