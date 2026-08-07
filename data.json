@@ -722,12 +722,12 @@
           "avgDev": -1.6210526315789473,
           "jobs": 19,
           "rec": 14,
-          "drv": null,
+          "drv": 81,
           "devPass": true,
           "recPass": false,
-          "drvPass": null,
-          "passCount": 1,
-          "monthPass": false
+          "drvPass": true,
+          "passCount": 2,
+          "monthPass": true
         },
         "David Sztuba": {
           "name": "David Sztuba",
@@ -836,23 +836,11 @@
           "drvPass": true,
           "passCount": 1,
           "monthPass": false
-        },
-        "Daniel OKeefe": {
-          "name": "Daniel OKeefe",
-          "avgDev": null,
-          "jobs": 0,
-          "rec": null,
-          "drv": 81,
-          "devPass": null,
-          "recPass": null,
-          "drvPass": true,
-          "passCount": 1,
-          "monthPass": false
         }
       }
     }
   },
-  "updatedAt": "2026-08-07T20:58:01.884Z",
+  "updatedAt": "2026-08-07T20:59:21.367Z",
   "roster": {
     "2300764429 .": "Other / Not Participating",
     "Chad Tomaseck": "1st Year Apprentice",
