@@ -840,14 +840,13 @@
       }
     }
   },
-  "updatedAt": "2026-08-07T20:59:21.367Z",
+  "updatedAt": "2026-08-07T20:59:40.737Z",
   "roster": {
     "2300764429 .": "Other / Not Participating",
     "Chad Tomaseck": "1st Year Apprentice",
     "Christopher Primamore": "3rd Year Apprentice",
     "Connor Miller": "5th Year Apprentice",
     "Daniel O'Keefe": "5th Year Apprentice",
-    "Daniel OKeefe": "5th Year Apprentice",
     "David Sztuba": "4th Year Apprentice",
     "Dennis Arana": "Journeyman",
     "Kevin Burke": "Journeyman",
@@ -859,12 +858,11 @@
   },
   "active": {
     "2300764429 .": false,
-    "Box Truck": true,
+    "Box Truck": false,
     "Chad Tomaseck": true,
     "Christopher Primamore": true,
     "Connor Miller": true,
     "Daniel O'Keefe": true,
-    "Daniel OKeefe": true,
     "David Sztuba": true,
     "Dennis Arana": true,
     "Kevin Burke": true,
