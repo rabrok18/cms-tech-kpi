@@ -989,7 +989,7 @@
       }
     }
   },
-  "updatedAt": "2026-09-25T12:00:00.678Z",
+  "updatedAt": "2026-09-25T12:02:13.488Z",
   "roster": {
     "2300764429 .": "Other / Not Participating",
     "Chad Tomaseck": "1st Year Apprentice",
@@ -1012,6 +1012,7 @@
     "Christopher Primamore": true,
     "Connor Miller": true,
     "Daniel O'Keefe": true,
+    "Daniel OKeefe": false,
     "David Sztuba": true,
     "Dennis Arana": true,
     "Kevin Burke": true,
