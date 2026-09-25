@@ -838,9 +838,158 @@
           "monthPass": false
         }
       }
+    },
+    "Aug 2026": {
+      "month": "Aug 2026",
+      "techs": {
+        "Chad Tomaseck": {
+          "name": "Chad Tomaseck",
+          "avgDev": -2.2066666666666666,
+          "jobs": 3,
+          "rec": 1,
+          "drv": 76,
+          "devPass": true,
+          "recPass": false,
+          "drvPass": true,
+          "passCount": 2,
+          "monthPass": true
+        },
+        "Christopher Primamore": {
+          "name": "Christopher Primamore",
+          "avgDev": -0.05,
+          "jobs": 2,
+          "rec": 17,
+          "drv": 74,
+          "devPass": true,
+          "recPass": false,
+          "drvPass": false,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "Connor Miller": {
+          "name": "Connor Miller",
+          "avgDev": -1.8943478260869566,
+          "jobs": 23,
+          "rec": 49,
+          "drv": 82,
+          "devPass": true,
+          "recPass": true,
+          "drvPass": true,
+          "passCount": 3,
+          "monthPass": true
+        },
+        "Daniel O'Keefe": {
+          "name": "Daniel O'Keefe",
+          "avgDev": -1.7088235294117649,
+          "jobs": 17,
+          "rec": 11,
+          "drv": null,
+          "devPass": true,
+          "recPass": false,
+          "drvPass": null,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "David Sztuba": {
+          "name": "David Sztuba",
+          "avgDev": -2.9322727272727276,
+          "jobs": 22,
+          "rec": 24,
+          "drv": 82,
+          "devPass": true,
+          "recPass": true,
+          "drvPass": true,
+          "passCount": 3,
+          "monthPass": true
+        },
+        "Dennis Arana": {
+          "name": "Dennis Arana",
+          "avgDev": -1.763529411764706,
+          "jobs": 17,
+          "rec": 23,
+          "drv": 92,
+          "devPass": true,
+          "recPass": true,
+          "drvPass": true,
+          "passCount": 3,
+          "monthPass": true
+        },
+        "Kevin Burke": {
+          "name": "Kevin Burke",
+          "avgDev": -1.7719999999999998,
+          "jobs": 20,
+          "rec": 18,
+          "drv": 74,
+          "devPass": true,
+          "recPass": false,
+          "drvPass": false,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "Rashan Dennis": {
+          "name": "Rashan Dennis",
+          "avgDev": -1.8166666666666669,
+          "jobs": 9,
+          "rec": 7,
+          "drv": 70,
+          "devPass": true,
+          "recPass": false,
+          "drvPass": false,
+          "passCount": 1,
+          "monthPass": false
+        },
+        "Ray Dejesus": {
+          "name": "Ray Dejesus",
+          "avgDev": -2.0025,
+          "jobs": 12,
+          "rec": 17,
+          "drv": 91,
+          "devPass": true,
+          "recPass": false,
+          "drvPass": true,
+          "passCount": 2,
+          "monthPass": true
+        },
+        "Stephen Handrik": {
+          "name": "Stephen Handrik",
+          "avgDev": -2.8466666666666662,
+          "jobs": 6,
+          "rec": 1,
+          "drv": 81,
+          "devPass": true,
+          "recPass": false,
+          "drvPass": true,
+          "passCount": 2,
+          "monthPass": true
+        },
+        "Thomas Mulligan": {
+          "name": "Thomas Mulligan",
+          "avgDev": null,
+          "jobs": 0,
+          "rec": 0,
+          "drv": null,
+          "devPass": null,
+          "recPass": false,
+          "drvPass": null,
+          "passCount": 0,
+          "monthPass": false
+        },
+        "Daniel OKeefe": {
+          "name": "Daniel OKeefe",
+          "avgDev": null,
+          "jobs": 0,
+          "rec": null,
+          "drv": 83,
+          "devPass": null,
+          "recPass": null,
+          "drvPass": true,
+          "passCount": 1,
+          "monthPass": false
+        }
+      }
     }
   },
-  "updatedAt": "2026-08-07T20:59:40.737Z",
+  "updatedAt": "2026-09-25T12:00:00.678Z",
   "roster": {
     "2300764429 .": "Other / Not Participating",
     "Chad Tomaseck": "1st Year Apprentice",
