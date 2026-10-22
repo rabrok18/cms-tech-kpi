@@ -27,18 +27,6 @@
           "passCount": 2,
           "monthPass": true
         },
-        "Connor Miller": {
-          "name": "Connor Miller",
-          "avgDev": -2.1568,
-          "jobs": 25,
-          "rec": 25,
-          "drv": 85,
-          "devPass": true,
-          "recPass": true,
-          "drvPass": true,
-          "passCount": 3,
-          "monthPass": true
-        },
         "David Sztuba": {
           "name": "David Sztuba",
           "avgDev": -2.3666666666666667,
@@ -115,18 +103,6 @@
           "drvPass": true,
           "passCount": 1,
           "monthPass": false
-        },
-        "Connor Miller": {
-          "name": "Connor Miller",
-          "avgDev": -0.43235294117647055,
-          "jobs": 17,
-          "rec": 38,
-          "drv": 83,
-          "devPass": true,
-          "recPass": true,
-          "drvPass": true,
-          "passCount": 3,
-          "monthPass": true
         },
         "David Sztuba": {
           "name": "David Sztuba",
@@ -205,18 +181,6 @@
           "passCount": 2,
           "monthPass": true
         },
-        "Connor Miller": {
-          "name": "Connor Miller",
-          "avgDev": -0.7116666666666667,
-          "jobs": 18,
-          "rec": 31,
-          "drv": 90,
-          "devPass": true,
-          "recPass": true,
-          "drvPass": true,
-          "passCount": 3,
-          "monthPass": true
-        },
         "David Sztuba": {
           "name": "David Sztuba",
           "avgDev": -0.15161290322580645,
@@ -280,18 +244,6 @@
           "recPass": false,
           "drvPass": true,
           "passCount": 2,
-          "monthPass": true
-        },
-        "Connor Miller": {
-          "name": "Connor Miller",
-          "avgDev": -0.44842105263157894,
-          "jobs": 19,
-          "rec": 22,
-          "drv": 89,
-          "devPass": true,
-          "recPass": true,
-          "drvPass": true,
-          "passCount": 3,
           "monthPass": true
         },
         "David Sztuba": {
@@ -377,18 +329,6 @@
           "jobs": 4,
           "rec": 11,
           "drv": 77,
-          "devPass": true,
-          "recPass": false,
-          "drvPass": true,
-          "passCount": 2,
-          "monthPass": true
-        },
-        "Connor Miller": {
-          "name": "Connor Miller",
-          "avgDev": -0.14,
-          "jobs": 16,
-          "rec": 15,
-          "drv": 87,
           "devPass": true,
           "recPass": false,
           "drvPass": true,
@@ -490,18 +430,6 @@
           "jobs": 1,
           "rec": 12,
           "drv": 77,
-          "devPass": true,
-          "recPass": false,
-          "drvPass": true,
-          "passCount": 2,
-          "monthPass": true
-        },
-        "Connor Miller": {
-          "name": "Connor Miller",
-          "avgDev": -1.6190000000000002,
-          "jobs": 20,
-          "rec": 17,
-          "drv": 83,
           "devPass": true,
           "recPass": false,
           "drvPass": true,
@@ -620,18 +548,6 @@
           "drvPass": false,
           "passCount": 1,
           "monthPass": false
-        },
-        "Connor Miller": {
-          "name": "Connor Miller",
-          "avgDev": -0.7305882352941176,
-          "jobs": 17,
-          "rec": 26,
-          "drv": 85,
-          "devPass": true,
-          "recPass": true,
-          "drvPass": true,
-          "passCount": 3,
-          "monthPass": true
         },
         "Daniel O'Keefe": {
           "name": "Daniel O'Keefe",
@@ -770,18 +686,6 @@
           "passCount": 1,
           "monthPass": false
         },
-        "Connor Miller": {
-          "name": "Connor Miller",
-          "avgDev": -1.8943478260869566,
-          "jobs": 23,
-          "rec": 49,
-          "drv": 82,
-          "devPass": true,
-          "recPass": true,
-          "drvPass": true,
-          "passCount": 3,
-          "monthPass": true
-        },
         "Daniel O'Keefe": {
           "name": "Daniel O'Keefe",
           "avgDev": -1.7088235294117649,
@@ -881,12 +785,11 @@
       }
     }
   },
-  "updatedAt": "2026-10-22T15:33:01.980Z",
+  "updatedAt": "2026-10-22T15:33:05.527Z",
   "roster": {
     "2300764429 .": "Other / Not Participating",
     "Chad Tomaseck": "1st Year Apprentice",
     "Christopher Primamore": "3rd Year Apprentice",
-    "Connor Miller": "5th Year Apprentice",
     "Daniel O'Keefe": "5th Year Apprentice",
     "David Sztuba": "4th Year Apprentice",
     "Dennis Arana": "Journeyman",
@@ -900,7 +803,6 @@
     "Box Truck": false,
     "Chad Tomaseck": true,
     "Christopher Primamore": true,
-    "Connor Miller": true,
     "Daniel O'Keefe": true,
     "Daniel OKeefe": false,
     "David Sztuba": true,
