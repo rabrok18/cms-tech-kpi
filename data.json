@@ -466,18 +466,6 @@
           "drvPass": true,
           "passCount": 1,
           "monthPass": false
-        },
-        "Thomas Mulligan": {
-          "name": "Thomas Mulligan",
-          "avgDev": null,
-          "jobs": 0,
-          "rec": null,
-          "drv": 65,
-          "devPass": null,
-          "recPass": null,
-          "drvPass": false,
-          "passCount": 0,
-          "monthPass": false
         }
       }
     },
@@ -603,18 +591,6 @@
           "drvPass": false,
           "passCount": 0,
           "monthPass": false
-        },
-        "Thomas Mulligan": {
-          "name": "Thomas Mulligan",
-          "avgDev": null,
-          "jobs": 0,
-          "rec": null,
-          "drv": 68,
-          "devPass": null,
-          "recPass": null,
-          "drvPass": false,
-          "passCount": 0,
-          "monthPass": false
         }
       }
     },
@@ -728,18 +704,6 @@
           "drvPass": false,
           "passCount": 0,
           "monthPass": false
-        },
-        "Thomas Mulligan": {
-          "name": "Thomas Mulligan",
-          "avgDev": -0.31,
-          "jobs": 1,
-          "rec": 0,
-          "drv": 82,
-          "devPass": true,
-          "recPass": false,
-          "drvPass": true,
-          "passCount": 2,
-          "monthPass": true
         },
         "Dennis Arana": {
           "name": "Dennis Arana",
@@ -902,18 +866,6 @@
           "passCount": 2,
           "monthPass": true
         },
-        "Thomas Mulligan": {
-          "name": "Thomas Mulligan",
-          "avgDev": null,
-          "jobs": 0,
-          "rec": 0,
-          "drv": null,
-          "devPass": null,
-          "recPass": false,
-          "drvPass": null,
-          "passCount": 0,
-          "monthPass": false
-        },
         "Daniel OKeefe": {
           "name": "Daniel OKeefe",
           "avgDev": null,
@@ -929,7 +881,7 @@
       }
     }
   },
-  "updatedAt": "2026-10-22T15:32:58.090Z",
+  "updatedAt": "2026-10-22T15:33:01.980Z",
   "roster": {
     "2300764429 .": "Other / Not Participating",
     "Chad Tomaseck": "1st Year Apprentice",
@@ -941,8 +893,7 @@
     "Kevin Burke": "Journeyman",
     "Rashan Dennis": "Journeyman",
     "Ray Dejesus": "Journeyman",
-    "Stephen Handrik": "Other / Not Participating",
-    "Thomas Mulligan": "Other / Not Participating"
+    "Stephen Handrik": "Other / Not Participating"
   },
   "active": {
     "2300764429 .": false,
@@ -958,7 +909,6 @@
     "Kevin David": false,
     "Rashan Dennis": true,
     "Ray Dejesus": true,
-    "Stephen Handrik": false,
-    "Thomas Mulligan": false
+    "Stephen Handrik": false
   }
 }
