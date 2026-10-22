@@ -75,18 +75,6 @@
           "passCount": 2,
           "monthPass": true
         },
-        "Robert Marsh": {
-          "name": "Robert Marsh",
-          "avgDev": -0.455,
-          "jobs": 2,
-          "rec": null,
-          "drv": 72,
-          "devPass": true,
-          "recPass": null,
-          "drvPass": false,
-          "passCount": 1,
-          "monthPass": false
-        },
         "Stephen Handrik": {
           "name": "Stephen Handrik",
           "avgDev": null,
@@ -188,18 +176,6 @@
           "passCount": 2,
           "monthPass": true
         },
-        "Robert Marsh": {
-          "name": "Robert Marsh",
-          "avgDev": -2.7933333333333334,
-          "jobs": 3,
-          "rec": 5,
-          "drv": 65,
-          "devPass": true,
-          "recPass": false,
-          "drvPass": false,
-          "passCount": 1,
-          "monthPass": false
-        },
         "Stephen Handrik": {
           "name": "Stephen Handrik",
           "avgDev": null,
@@ -276,18 +252,6 @@
           "drvPass": true,
           "passCount": 2,
           "monthPass": true
-        },
-        "Robert Marsh": {
-          "name": "Robert Marsh",
-          "avgDev": -2.1161538461538463,
-          "jobs": 13,
-          "rec": 2,
-          "drv": 65,
-          "devPass": true,
-          "recPass": false,
-          "drvPass": false,
-          "passCount": 1,
-          "monthPass": false
         }
       }
     },
@@ -377,18 +341,6 @@
           "drvPass": true,
           "passCount": 2,
           "monthPass": true
-        },
-        "Robert Marsh": {
-          "name": "Robert Marsh",
-          "avgDev": 0.075,
-          "jobs": 2,
-          "rec": null,
-          "drv": 85,
-          "devPass": false,
-          "recPass": null,
-          "drvPass": true,
-          "passCount": 1,
-          "monthPass": false
         },
         "Stephen Handrik": {
           "name": "Stephen Handrik",
@@ -509,18 +461,6 @@
           "jobs": 0,
           "rec": null,
           "drv": 86,
-          "devPass": null,
-          "recPass": null,
-          "drvPass": true,
-          "passCount": 1,
-          "monthPass": false
-        },
-        "Robert Marsh": {
-          "name": "Robert Marsh",
-          "avgDev": null,
-          "jobs": 0,
-          "rec": null,
-          "drv": 79,
           "devPass": null,
           "recPass": null,
           "drvPass": true,
@@ -989,7 +929,7 @@
       }
     }
   },
-  "updatedAt": "2026-09-25T12:02:33.180Z",
+  "updatedAt": "2026-10-22T15:32:58.090Z",
   "roster": {
     "2300764429 .": "Other / Not Participating",
     "Chad Tomaseck": "1st Year Apprentice",
@@ -1001,7 +941,6 @@
     "Kevin Burke": "Journeyman",
     "Rashan Dennis": "Journeyman",
     "Ray Dejesus": "Journeyman",
-    "Robert Marsh": "Journeyman",
     "Stephen Handrik": "Other / Not Participating",
     "Thomas Mulligan": "Other / Not Participating"
   },
@@ -1019,7 +958,6 @@
     "Kevin David": false,
     "Rashan Dennis": true,
     "Ray Dejesus": true,
-    "Robert Marsh": false,
     "Stephen Handrik": false,
     "Thomas Mulligan": false
   }
