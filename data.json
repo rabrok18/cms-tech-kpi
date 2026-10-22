@@ -394,18 +394,6 @@
           "drvPass": null,
           "passCount": 1,
           "monthPass": false
-        },
-        "2300764429 .": {
-          "name": "2300764429 .",
-          "avgDev": null,
-          "jobs": 0,
-          "rec": null,
-          "drv": 86,
-          "devPass": null,
-          "recPass": null,
-          "drvPass": true,
-          "passCount": 1,
-          "monthPass": false
         }
       }
     },
@@ -486,18 +474,6 @@
         },
         "Daniel O'Keefe": {
           "name": "Daniel O'Keefe",
-          "avgDev": null,
-          "jobs": 0,
-          "rec": null,
-          "drv": 82,
-          "devPass": null,
-          "recPass": null,
-          "drvPass": true,
-          "passCount": 1,
-          "monthPass": false
-        },
-        "2300764429 .": {
-          "name": "2300764429 .",
           "avgDev": null,
           "jobs": 0,
           "rec": null,
@@ -632,18 +608,6 @@
           "drvPass": null,
           "passCount": 0,
           "monthPass": false
-        },
-        "2300764429 .": {
-          "name": "2300764429 .",
-          "avgDev": null,
-          "jobs": 0,
-          "rec": null,
-          "drv": 90,
-          "devPass": null,
-          "recPass": null,
-          "drvPass": true,
-          "passCount": 1,
-          "monthPass": false
         }
       }
     },
@@ -773,9 +737,8 @@
       }
     }
   },
-  "updatedAt": "2026-10-22T15:33:26.600Z",
+  "updatedAt": "2026-10-22T15:33:30.000Z",
   "roster": {
-    "2300764429 .": "Other / Not Participating",
     "Chad Tomaseck": "1st Year Apprentice",
     "Christopher Primamore": "3rd Year Apprentice",
     "Daniel O'Keefe": "5th Year Apprentice",
@@ -787,7 +750,6 @@
     "Stephen Handrik": "Other / Not Participating"
   },
   "active": {
-    "2300764429 .": false,
     "Chad Tomaseck": true,
     "Christopher Primamore": true,
     "Daniel O'Keefe": true,
