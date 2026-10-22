@@ -633,18 +633,6 @@
           "passCount": 0,
           "monthPass": false
         },
-        "Box Truck": {
-          "name": "Box Truck",
-          "avgDev": null,
-          "jobs": 0,
-          "rec": null,
-          "drv": 90,
-          "devPass": null,
-          "recPass": null,
-          "drvPass": true,
-          "passCount": 1,
-          "monthPass": false
-        },
         "2300764429 .": {
           "name": "2300764429 .",
           "avgDev": null,
@@ -785,7 +773,7 @@
       }
     }
   },
-  "updatedAt": "2026-10-22T15:33:05.527Z",
+  "updatedAt": "2026-10-22T15:33:26.600Z",
   "roster": {
     "2300764429 .": "Other / Not Participating",
     "Chad Tomaseck": "1st Year Apprentice",
@@ -800,7 +788,6 @@
   },
   "active": {
     "2300764429 .": false,
-    "Box Truck": false,
     "Chad Tomaseck": true,
     "Christopher Primamore": true,
     "Daniel O'Keefe": true,
